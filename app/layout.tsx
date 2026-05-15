@@ -29,13 +29,23 @@ export const metadata: Metadata = {
     description:
       'A small daily mirror for your inner world. Join the waitlist for Mirar v2.',
     siteName: 'Mirar',
+    url: 'https://mirar.life',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://mirar.life/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mirar — Beta V1 is complete. What comes next.',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Mirar — The Next Version Is Coming',
     description: 'A small daily mirror for your inner world.',
+    images: ['https://mirar.life/og-image.png'],
   },
   robots: { index: true, follow: true },
 }
