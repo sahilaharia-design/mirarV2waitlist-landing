@@ -1,0 +1,78 @@
+/* Tailwind is pre-built via CLI — see tailwind.input.css and package.json build:css script */
+
+:root {
+  --color-ivory: #F6F1E8;
+  --color-charcoal: #1C1A17;
+  --color-peach: #D99A73;
+  --color-lavender: #B98BFF;
+  --color-dark: #2A2522;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* prevent horizontal scroll at body level — does NOT break position:fixed */
+}
+
+/* Scroll margin — accounts for fixed header (60px) + pt spacer + buffer */
+section[id] {
+  scroll-margin-top: 76px;
+}
+
+/* Mirror oval composite glow — radial gradient too complex for Tailwind alone */
+.mirror-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(217, 154, 115, 0.18) 0%,
+    rgba(185, 139, 255, 0.08) 50%,
+    transparent 75%
+  );
+}
+
+/* Animation stagger delay utilities */
+.delay-75  { animation-delay: 75ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1200 { animation-delay: 1200ms; }
+
+/* Opacity 0 initial state for entrance animations */
+.will-fade-up,
+.will-spring-up {
+  opacity: 0;
+}
+
+/* ── Scroll-reveal system ── */
+.sr {
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  transition: opacity 0.65s cubic-bezier(0.34, 1.4, 0.64, 1),
+              transform 0.65s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+.sr.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.sr-d1 { transition-delay: 80ms; }
+.sr-d2 { transition-delay: 160ms; }
+.sr-d3 { transition-delay: 240ms; }
+.sr-d4 { transition-delay: 320ms; }
+.sr-d5 { transition-delay: 400ms; }
+.sr-d6 { transition-delay: 480ms; }
+.sr-header { transition-delay: 0ms; }
