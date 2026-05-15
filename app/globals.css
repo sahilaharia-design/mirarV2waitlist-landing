@@ -24,9 +24,9 @@ body {
   overflow-x: hidden; /* prevent horizontal scroll at body level — does NOT break position:fixed */
 }
 
-/* Scroll margin — accounts for fixed header (60px) + pt spacer + buffer */
+/* Scroll margin — accounts for sticky header (~74px) + buffer */
 section[id] {
-  scroll-margin-top: 76px;
+  scroll-margin-top: 80px;
 }
 
 /* Mirror oval composite glow — radial gradient too complex for Tailwind alone */

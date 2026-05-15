@@ -53,7 +53,7 @@ export default function Header() {
     <>
       {/* ── Fixed floating nav — slides away on scroll down, snaps back on scroll up ── */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 px-3 sm:px-5 pt-3 pb-2 transition-transform duration-300 ease-out ${
+        className={`sticky top-0 z-50 px-3 sm:px-5 pt-3 pb-2 transition-transform duration-300 ease-out ${
           hidden ? '-translate-y-full' : 'translate-y-0'
         }`}
       >

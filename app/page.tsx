@@ -13,12 +13,13 @@ import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <>
-      {/* Header is fixed — lives outside <main> so no parent overflow clips it */}
+      {/* Announcement bar scrolls away naturally */}
+      <AnnouncementBar />
+
+      {/* Header is sticky — sticks once announcement bar scrolls off */}
       <Header />
 
-      {/* pt-[60px] = fixed header height so content starts below the nav */}
-      <main className="pt-[60px]">
-        <AnnouncementBar />
+      <main>
         <Hero />
         <WhyMirar />
         <BetaLearnings />
