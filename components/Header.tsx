@@ -143,7 +143,7 @@ export default function Header() {
         aria-modal="true"
         aria-label="Navigation menu"
         aria-hidden={!menuOpen}
-        className={`md:hidden fixed inset-0 z-40 bg-ivory transition-all duration-250 flex flex-col ${
+        className={`md:hidden fixed inset-0 z-40 bg-ivory transition-all duration-[250ms] flex flex-col ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
