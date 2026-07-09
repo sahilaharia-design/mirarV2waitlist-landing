@@ -82,7 +82,7 @@ export default function WhyNow() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {rituals.map((r, i) => (
             <div
-              key={r.label}
+              key={i}
               className={`sr sr-d${Math.min(i + 1, 6)} rounded-2xl p-6 flex flex-col gap-4 border transition-all duration-300 hover:-translate-y-1 ${
                 r.dark
                   ? 'bg-dark-section text-ivory border-transparent shadow-xl'

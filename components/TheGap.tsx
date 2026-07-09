@@ -44,7 +44,7 @@ export default function TheGap() {
             if (d.dark) {
               return (
                 <motion.div
-                  key={d.label}
+                  key={i}
                   className={`sr sr-d${Math.min(i + 1, 6)} rounded-2xl p-6 flex flex-col gap-3 border border-transparent shadow-xl col-span-2 sm:col-span-1 bg-dark-section text-ivory`}
                   whileHover={{ scale: 1.025 }}
                   transition={{ type: 'spring', stiffness: 340, damping: 22 }}
@@ -63,7 +63,7 @@ export default function TheGap() {
             }
             return (
               <motion.div
-                key={d.label}
+                key={i}
                 className={`sr sr-d${Math.min(i + 1, 6)} rounded-2xl p-6 flex flex-col gap-3 border border-charcoal/5 bg-card-bg text-charcoal`}
                 whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(28,26,23,0.09)', borderColor: 'rgba(28,26,23,0.1)' }}
                 transition={{ type: 'spring', stiffness: 350, damping: 20 }}

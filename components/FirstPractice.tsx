@@ -111,7 +111,7 @@ export default function FirstPractice() {
                 <div className="flex flex-col gap-2">
                   {previewOptions.map((text, i) => (
                     <div
-                      key={text}
+                      key={i}
                       className={`flex items-center gap-2.5 rounded-xl px-3.5 py-3 border ${
                         i === 0 ? 'bg-peach/12 border-peach/35' : 'bg-ivory/70 border-charcoal/6'
                       }`}

@@ -68,7 +68,7 @@ export default function ProductPreview() {
                     <div className="flex flex-col gap-1.5">
                       {phoneOptions.map((text, i) => (
                         <div
-                          key={text}
+                          key={i}
                           className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 ${
                             i === 1
                               ? 'bg-peach/12 border border-peach/30'
@@ -146,7 +146,7 @@ export default function ProductPreview() {
           {/* Flow description — right side */}
           <div className="flex-1 flex flex-col gap-7 pt-2">
             {flow.map((item, i) => (
-              <div key={item.label} className="flex gap-5 items-start">
+              <div key={i} className="flex gap-5 items-start">
                 <span className="font-sans text-[11px] tracking-[0.18em] text-peach/60 mt-0.5 flex-shrink-0">
                   {flowSteps[i]}
                 </span>
