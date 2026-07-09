@@ -1,12 +1,11 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useTranslation } from '@/lib/i18n'
+import LanguageSwitcher from './LanguageSwitcher'
 
-const NAV_LINKS = [
-  { label: 'What changed', href: '#changed', external: false },
-  { label: 'Preview',      href: '#preview', external: false },
-  { label: 'Notes',        href: 'https://substack.com/@mirarlife', external: true },
-]
+const APP_URL = 'https://mirar-app.vercel.app/assess'
+const LOGIN_URL = 'https://mirar-app.vercel.app/login'
 
 const SOCIAL_LINKS = [
   { label: 'Instagram', href: 'https://www.instagram.com/mirar.life' },
@@ -15,6 +14,12 @@ const SOCIAL_LINKS = [
 ]
 
 export default function Header() {
+  const { t } = useTranslation()
+  const NAV_LINKS = [
+    { label: t('header.nav_how'), href: '#practice', external: false },
+    { label: t('header.nav_dimensions'), href: '#dimensions', external: false },
+    { label: t('header.nav_notes'), href: 'https://substack.com/@mirarlife', external: true },
+  ]
   const [scrolled,  setScrolled]  = useState(false)
   const [hidden,    setHidden]    = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
@@ -88,9 +93,21 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* Returning-user entry point — visually secondary, never competes with the CTA */}
+          <a
+            href={LOGIN_URL}
+            className="hidden md:inline-block flex-shrink-0 font-sans text-[13px] text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
+          >
+            {t('header.log_in')}
+          </a>
+
+          <div className="hidden md:block flex-shrink-0">
+            <LanguageSwitcher compact />
+          </div>
+
           {/* CTA — always visible on every screen size */}
           <a
-            href="#waitlist"
+            href={APP_URL}
             onClick={closeMenu}
             className="flex-shrink-0 animate-cta-pulse inline-flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full font-sans font-semibold text-[12px] sm:text-[13px] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap"
             style={{
@@ -99,15 +116,15 @@ export default function Header() {
               boxShadow: '0 2px 12px rgba(217,154,115,0.45), 0 1px 3px rgba(0,0,0,0.12)',
             }}
           >
-            <span className="hidden sm:inline">Get early access</span>
-            <span className="sm:hidden">Join now</span>
+            <span className="hidden sm:inline">{t('header.begin_full')}</span>
+            <span className="sm:hidden">{t('header.begin_short')}</span>
             <span aria-hidden className="text-charcoal/70">→</span>
           </a>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(o => !o)}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={menuOpen ? t('header.menu_close') : t('header.menu_open')}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] rounded-xl hover:bg-charcoal/5 transition-colors flex-shrink-0"
@@ -148,9 +165,13 @@ export default function Header() {
             ))}
           </nav>
 
+          <div className="mt-6 flex justify-start">
+            <LanguageSwitcher />
+          </div>
+
           <div className="mt-8 flex flex-col">
             <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-text-secondary/50 mb-3">
-              Follow the rebuild
+              {t('header.follow_rebuild')}
             </p>
             {SOCIAL_LINKS.map(({ label, href }) => (
               <a
@@ -170,16 +191,24 @@ export default function Header() {
           <div className="flex-1 min-h-8" />
 
           <a
-            href="#waitlist"
+            href={LOGIN_URL}
             onClick={closeMenu}
-            className="block w-full text-center py-4 px-7 rounded-full font-sans font-semibold text-base mt-8 mb-6 transition-all duration-200 hover:scale-[1.02] active:scale-95"
+            className="block w-full text-center py-2.5 font-sans text-sm text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
+          >
+            {t('header.already_have_account')}
+          </a>
+
+          <a
+            href={APP_URL}
+            onClick={closeMenu}
+            className="block w-full text-center py-4 px-7 rounded-full font-sans font-semibold text-base mt-2 mb-6 transition-all duration-200 hover:scale-[1.02] active:scale-95"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',
               color: '#1C1A17',
               boxShadow: '0 4px 20px rgba(217,154,115,0.4)',
             }}
           >
-            Get early access →
+            {t('header.begin_full')} →
           </a>
         </div>
       </div>

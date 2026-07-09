@@ -1,3 +1,7 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n'
+
 function IcnTooth() {
   return (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
@@ -38,37 +42,43 @@ function IcnOval() {
   )
 }
 
-const rituals = [
-  { icon: <IcnTooth />,    label: 'Brushing teeth', sub: 'Physical hygiene',  desc: 'Helps you notice and maintain your teeth.',              dark: false },
-  { icon: <IcnBolt />,     label: 'Exercise',        sub: 'Body maintenance', desc: 'Helps you notice and strengthen your body.',             dark: false },
-  { icon: <IcnLeaf />,     label: 'Nutrition',       sub: 'Energy tracking',  desc: 'Helps you notice how you fuel yourself.',                dark: false },
-  { icon: <IcnCalendar />, label: 'Calendar',        sub: 'Time accounting',  desc: 'Helps you notice where your time goes.',                 dark: false },
-  { icon: <IcnOval />,     label: 'Mirar',           sub: 'Inner signal',     desc: 'Helps you notice what is happening inside you — daily.', dark: true  },
+const RITUAL_ICONS = [
+  { icon: <IcnTooth />,    dark: false },
+  { icon: <IcnBolt />,     dark: false },
+  { icon: <IcnLeaf />,     dark: false },
+  { icon: <IcnCalendar />, dark: false },
+  { icon: <IcnOval />,     dark: true  },
 ]
 
-export default function WhyMirar() {
+const APP_URL = 'https://mirar-app.vercel.app/assess'
+
+export default function WhyNow() {
+  const { t, tList } = useTranslation()
+  const rituals = tList('why_now.rituals').map((r: any, i: number) => ({ ...r, ...RITUAL_ICONS[i] }))
   return (
     <section id="why" className="py-14 sm:py-20 lg:py-24 bg-ivory">
       <div className="max-w-container mx-auto px-6">
 
-        {/* Heading */}
         <div className="max-w-2xl mb-5 sr sr-header">
           <h2 className="font-serif text-4xl sm:text-5xl font-light leading-[1.1] text-charcoal mb-6">
-            Everything important gets a daily check-in.
-            <br />
-            <em>Except the inner self.</em>
+            {t('why_now.title_line1')}{' '}
+            <em>{t('why_now.title_em')}</em>
           </h2>
-          <p className="font-sans text-base text-text-secondary leading-relaxed mb-3">
-            Most of us already have rituals for the visible parts of life. We brush our teeth. We move. We track sleep, calories, steps, and money.
-          </p>
-          <p className="font-sans text-base text-text-secondary leading-relaxed">
-            But the patterns shaping our choices go completely unnoticed — the pressure we carry, the conversations we avoid, the energy we leak, the versions of ourselves we keep performing.
-          </p>
+          <div className="space-y-4">
+            <p className="font-sans text-base text-text-secondary leading-relaxed">
+              {t('why_now.body1')}
+            </p>
+            <p className="font-sans text-base text-text-secondary leading-relaxed">
+              {t('why_now.body2')}
+            </p>
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed font-medium">
+              {t('why_now.body3')}
+            </p>
+          </div>
         </div>
 
         <div className="w-12 h-px bg-peach/40 mb-10" />
 
-        {/* Ritual cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {rituals.map((r, i) => (
             <div
@@ -99,13 +109,12 @@ export default function WhyMirar() {
           ))}
         </div>
 
-        {/* Pull quote + CTA */}
         <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sr">
           <p className="font-serif text-xl sm:text-2xl font-light italic text-charcoal/65 leading-relaxed border-l-2 border-peach/50 pl-5 max-w-md">
-            &ldquo;Mirar fills the space that nothing else covers.&rdquo;
+            &ldquo;{t('why_now.quote')}&rdquo;
           </p>
           <a
-            href="https://mirar-app.vercel.app/assess"
+            href={APP_URL}
             className="flex-shrink-0 animate-cta-pulse inline-flex items-center gap-2 px-6 py-3 rounded-full font-sans font-semibold text-sm transition-all duration-200 hover:scale-105 active:scale-95"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',
@@ -113,9 +122,10 @@ export default function WhyMirar() {
               boxShadow: '0 2px 14px rgba(217,154,115,0.4)',
             }}
           >
-            Begin Your Reflection →
+            {t('why_now.cta')} →
           </a>
         </div>
+
       </div>
     </section>
   )

@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './tailwind.css'
 import './globals.css'
 import AnimationObserver from '@/components/AnimationObserver'
-import StickyBottomCTA from '@/components/StickyBottomCTA'
+import { I18nProvider } from '@/lib/i18n'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -21,13 +21,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Mirar — The Next Version Is Coming',
+  title: 'Mirar — Emotional Fitness Begins With Emotional Hygiene',
   description:
-    'Mirar is an emotional and mental hygiene system being rebuilt into a simpler daily mirror for your inner world. Join the waitlist.',
+    'Mirar is your two-minute daily practice for your inner world. Not journaling. Not therapy. A clean read of your internal signals, every day.',
   openGraph: {
-    title: 'Mirar — The Next Version Is Coming',
+    title: 'Mirar — Emotional Fitness Begins With Emotional Hygiene',
     description:
-      'A small daily mirror for your inner world. Join the waitlist for Mirar v2.',
+      'Two minutes a day. A mirror for your inner state. Build emotional fitness through daily emotional hygiene.',
     siteName: 'Mirar',
     url: 'https://mirar.life',
     locale: 'en_US',
@@ -58,9 +58,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="font-sans bg-ivory text-charcoal">
-        {children}
-        <AnimationObserver />
-        <StickyBottomCTA />
+        <I18nProvider>
+          {children}
+          <AnimationObserver />
+        </I18nProvider>
       </body>
     </html>
   )

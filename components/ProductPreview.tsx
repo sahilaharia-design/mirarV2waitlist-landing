@@ -1,19 +1,25 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n'
+
 export default function ProductPreview() {
+  const { t, tList } = useTranslation()
+  const phoneOptions = tList('product_preview.phone_options') as string[]
+  const flow = tList('product_preview.flow') as Array<{ label: string; desc: string }>
+  const flowSteps = ['01', '02', '03', '04']
   return (
     <section id="preview" className="py-14 sm:py-18 lg:py-24 bg-dark-section overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         {/* Header */}
         <div className="max-w-xl mb-14 lg:mb-16">
           <p className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/30 mb-3">
-            Sneak peek
+            {t('product_preview.eyebrow')}
           </p>
           <h2 className="font-serif text-4xl sm:text-5xl font-light text-ivory leading-[1.1] mb-5">
-            A quieter daily interface for noticing what is happening inside.
+            {t('product_preview.title')}
           </h2>
           <p className="font-sans text-base text-ivory/50 leading-relaxed">
-            The next version is being designed to feel lighter from the first
-            interaction — clearer prompts, simpler choices, and reflections
-            that feel like recognition, not advice.
+            {t('product_preview.body')}
           </p>
         </div>
 
@@ -52,35 +58,30 @@ export default function ProductPreview() {
                   <div className="bg-white rounded-2xl p-4 border border-charcoal/6 shadow-sm">
                     <div className="flex items-center justify-between mb-2.5">
                       <p className="font-sans text-[9px] tracking-[0.16em] uppercase text-peach">
-                        Pause
+                        {t('product_preview.phone_step1')}
                       </p>
                       <div className="w-1.5 h-1.5 rounded-full bg-peach/60" />
                     </div>
                     <p className="font-serif text-[12px] leading-snug text-charcoal italic mb-3">
-                      What has been quietly taking more space inside you lately?
+                      {t('product_preview.phone_question')}
                     </p>
                     <div className="flex flex-col gap-1.5">
-                      {[
-                        { text: "A decision I haven't made", active: false },
-                        { text: "A conversation I'm avoiding", active: true },
-                        { text: 'A version of myself I keep performing', active: false },
-                        { text: "A pressure I've normalized", active: false },
-                      ].map((opt) => (
+                      {phoneOptions.map((text, i) => (
                         <div
-                          key={opt.text}
+                          key={text}
                           className={`flex items-center gap-2 rounded-lg px-2.5 py-1.5 ${
-                            opt.active
+                            i === 1
                               ? 'bg-peach/12 border border-peach/30'
                               : 'bg-card-bg/60 border border-transparent'
                           }`}
                         >
                           <div
                             className={`w-2 h-2 rounded-full border flex-shrink-0 ${
-                              opt.active ? 'bg-peach border-peach' : 'border-charcoal/20'
+                              i === 1 ? 'bg-peach border-peach' : 'border-charcoal/20'
                             }`}
                           />
                           <span className="font-sans text-[9px] text-charcoal/70 leading-tight">
-                            {opt.text}
+                            {text}
                           </span>
                         </div>
                       ))}
@@ -90,10 +91,10 @@ export default function ProductPreview() {
                   {/* Step 2 — Notice */}
                   <div className="bg-dark-section rounded-2xl p-4">
                     <p className="font-sans text-[9px] tracking-[0.16em] uppercase text-peach/70 mb-2">
-                      Notice
+                      {t('product_preview.phone_step2')}
                     </p>
                     <p className="font-serif text-[11px] italic text-ivory/80 leading-relaxed">
-                      You may not be lacking clarity. You may be carrying too many unresolved tabs.
+                      {t('product_preview.phone_step2_text')}
                     </p>
                     <div className="flex items-center gap-1 mt-3">
                       <div className="w-1 h-1 rounded-full bg-peach/60" />
@@ -105,10 +106,10 @@ export default function ProductPreview() {
                   {/* Step 3 — Return */}
                   <div className="bg-card-bg rounded-2xl p-4 border border-charcoal/5">
                     <p className="font-sans text-[9px] tracking-[0.16em] uppercase text-text-secondary mb-2">
-                      Return
+                      {t('product_preview.phone_step3')}
                     </p>
                     <p className="font-serif text-[11px] text-charcoal/80 leading-relaxed italic">
-                      This week's strongest signal: energy spent maintaining appearances.
+                      {t('product_preview.phone_step3_text')}
                     </p>
                     <div className="mt-3 flex items-center gap-2">
                       <div className="flex-1 h-0.5 bg-charcoal/8 rounded-full overflow-hidden">
@@ -144,31 +145,10 @@ export default function ProductPreview() {
 
           {/* Flow description — right side */}
           <div className="flex-1 flex flex-col gap-7 pt-2">
-            {[
-              {
-                step: '01',
-                label: 'Pause',
-                desc: 'One clear question. Simple, recognisable options. You are not asked to write — just to notice.',
-              },
-              {
-                step: '02',
-                label: 'Answer',
-                desc: 'Select what feels closest. No judgement. No correct answer. Just a signal.',
-              },
-              {
-                step: '03',
-                label: 'Notice',
-                desc: 'A short reflection surfaces — not advice, not diagnosis. Just a mirror of what your responses are forming.',
-              },
-              {
-                step: '04',
-                label: 'Return',
-                desc: 'Come back tomorrow. Over time, patterns emerge. Mirar shows you what you carry, avoid, repeat, and outgrow.',
-              },
-            ].map((item) => (
-              <div key={item.step} className="flex gap-5 items-start">
+            {flow.map((item, i) => (
+              <div key={item.label} className="flex gap-5 items-start">
                 <span className="font-sans text-[11px] tracking-[0.18em] text-peach/60 mt-0.5 flex-shrink-0">
-                  {item.step}
+                  {flowSteps[i]}
                 </span>
                 <div>
                   <h3 className="font-serif text-xl font-light text-ivory mb-1.5">
@@ -182,7 +162,7 @@ export default function ProductPreview() {
             ))}
 
             <p className="font-sans text-[11px] text-ivory/20 tracking-wide mt-2">
-              Concept preview — final experience may evolve.
+              {t('product_preview.footer')}
             </p>
           </div>
         </div>

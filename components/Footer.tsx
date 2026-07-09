@@ -1,3 +1,7 @@
+'use client'
+
+import { useTranslation } from '@/lib/i18n'
+
 const SOCIAL_LINKS = [
   { label: 'Substack',  href: 'https://substack.com/@mirarlife' },
   { label: 'Instagram', href: 'https://www.instagram.com/mirar.life' },
@@ -6,6 +10,7 @@ const SOCIAL_LINKS = [
 ]
 
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="bg-ivory border-t border-charcoal/10">
       <div className="max-w-container mx-auto px-6 py-12 sm:py-14">
@@ -26,17 +31,17 @@ export default function Footer() {
               />
             </a>
             <p className="font-sans text-sm text-text-secondary leading-relaxed">
-              Emotional and mental hygiene for everyday life.
+              {t('footer.tagline')}
             </p>
             <p className="font-sans text-sm text-text-secondary/55 leading-relaxed mt-1">
-              Built for noticing. Not optimizing.
+              {t('footer.subtagline')}
             </p>
           </div>
 
           {/* Links */}
           <div className="flex flex-col gap-2.5">
             <p className="font-sans text-[10px] tracking-[0.18em] uppercase text-text-secondary/50 mb-1">
-              Follow the rebuild
+              {t('footer.follow_rebuild')}
             </p>
             {SOCIAL_LINKS.map(({ label, href }) => (
               <a

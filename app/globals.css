@@ -58,6 +58,14 @@ section[id] {
   opacity: 0;
 }
 
+/* Ensure delayed entrance animations start from their 0% keyframe (not default visible state).
+   'both' = fill-mode applies before animation starts AND after it ends. */
+.animate-spring-up,
+.animate-fade-up,
+.animate-fade-in {
+  animation-fill-mode: both;
+}
+
 /* ── Scroll-reveal system ── */
 .sr {
   opacity: 0;
@@ -76,3 +84,19 @@ section[id] {
 .sr-d5 { transition-delay: 400ms; }
 .sr-d6 { transition-delay: 480ms; }
 .sr-header { transition-delay: 0ms; }
+
+/* ── AlignmentLoop — rotating dashed track ── */
+@keyframes loop-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Arc draw-on (used by Hero ring) ── */
+@keyframes arc-draw {
+  from { stroke-dashoffset: 364; }
+  to   { stroke-dashoffset: 102; }
+}
+@keyframes arc-glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(217,154,115,0.4)); }
+  50%       { filter: drop-shadow(0 0 10px rgba(217,154,115,0.75)); }
+}

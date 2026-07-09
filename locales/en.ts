@@ -1,0 +1,209 @@
+export default {
+  announcement_bar: {
+    text_full: 'Mirar is live. Try it first — pay what feels right after.',
+    text_short: 'Mirar is live. Try it first.',
+    follow_full: 'Follow the journey',
+    follow_short: 'Follow',
+  },
+
+  header: {
+    nav_how: 'How it works',
+    nav_dimensions: 'Six Dimensions',
+    nav_notes: 'Notes',
+    log_in: 'Log in',
+    begin_full: 'Begin Your Reflection',
+    begin_short: 'Begin',
+    follow_rebuild: 'Follow the rebuild',
+    already_have_account: 'Already have an account? Log in',
+    menu_open: 'Open menu',
+    menu_close: 'Close menu',
+  },
+
+  hero: {
+    eyebrow: 'Inner alignment infrastructure',
+    title_line1: 'For every part of life,',
+    title_line2: 'a daily practice.',
+    title_except: 'Except one.',
+    body: 'We built medicine for the body, finance for money, calendars for time, education for the mind. The inner world — what’s actually driving your choices each day — has no system. Mirar is the first.',
+    cta: 'Begin Your Reflection',
+    cta_note: 'No price tag. Offer what it’s worth to you, after.',
+    day_chip: 'Day 7 · Cycle 1',
+    status: 'ALIGNED',
+    signal_chips: {
+      carrying: 'carrying',
+      avoiding: 'avoiding',
+      repeating: 'repeating',
+      outgrowing: 'outgrowing',
+      noticing: 'noticing',
+    },
+  },
+
+  the_gap: {
+    title_line1: 'We left one domain',
+    title_em: 'entirely unbuilt.',
+    body: 'Every important domain of human life has accumulated tools, systems, and daily practices. Every domain — except the one that runs beneath all of them.',
+    footer: 'This is not an oversight. No one had built the instrument yet.',
+    domains: [
+      { label: 'Body', system: 'Fitness, nutrition, medicine' },
+      { label: 'Money', system: 'Banking, budgets, investment' },
+      { label: 'Time', system: 'Calendars, schedules, planning' },
+      { label: 'Knowledge', system: 'Education, books, information' },
+      { label: 'Relationships', system: 'Therapy, coaching, communication' },
+      { label: 'Inner State', system: 'Nothing.' },
+    ],
+  },
+
+  without_practice: {
+    eyebrow: 'The cost',
+    title: 'What happens when there is no practice for the inner life?',
+    body: 'Not because something is wrong with you. Because nobody taught us how to observe ourselves consistently.',
+    mistakes: [
+      'We mistake exhaustion for failure.',
+      'We mistake anxiety for identity.',
+      'We mistake reaction for choice.',
+      'We mistake busyness for direction.',
+      'We mistake adaptation for authenticity.',
+      'We mistake survival for living.',
+    ],
+  },
+
+  why_now: {
+    title_line1: 'The cost of this gap has',
+    title_em: 'never been higher.',
+    body1: 'We are the first generation to make more decisions per day than any before us. More noise, more information, more choice — and still no instrument for reading the inner state beneath all of it.',
+    body2: 'Without one, we operate from accumulated patterns — reacting instead of responding, drifting instead of choosing, performing versions of ourselves that no longer fit.',
+    body3: 'This is not a mental health problem. It is a missing infrastructure problem.',
+    rituals: [
+      { label: 'Brushing teeth', sub: 'Physical hygiene', desc: 'Helps you notice and maintain your teeth.' },
+      { label: 'Exercise', sub: 'Body maintenance', desc: 'Helps you notice and strengthen your body.' },
+      { label: 'Nutrition', sub: 'Energy tracking', desc: 'Helps you notice how you fuel yourself.' },
+      { label: 'Calendar', sub: 'Time accounting', desc: 'Helps you notice where your time goes.' },
+      { label: 'Mirar', sub: 'Inner signal', desc: 'Helps you notice what is happening inside you — daily.' },
+    ],
+    quote: 'Mirar fills the space that nothing else covers.',
+    cta: 'Begin Your Reflection',
+  },
+
+  first_practice: {
+    eyebrow: 'The practice',
+    title: 'The practice itself is simple.',
+    body: 'Mirar does not ask you to become someone else. It asks you to notice who you already are.',
+    steps: [
+      { label: 'Morning', desc: 'You open Mirar. Two minutes. No agenda.' },
+      { label: 'Pause', desc: 'One question surfaces. You sit with it honestly.' },
+      { label: 'Reflect', desc: 'Not what you should feel — what you actually feel.' },
+      { label: 'Choose', desc: 'You select what is true for you right now.' },
+      { label: 'Continue', desc: 'Your signal is recorded. You carry on with your day.' },
+      { label: 'Notice Again', desc: 'Tomorrow, the practice begins once more.' },
+    ],
+    preview_label: 'Daily pause · Day 7',
+    preview_question: 'Right now, inside, I notice...',
+    preview_options: [
+      'A decision I keep deferring',
+      'A conversation I’m avoiding',
+      'A version of myself I’m still performing',
+    ],
+    preview_footer: 'Start today’s mirror',
+  },
+
+  product_preview: {
+    eyebrow: 'The daily practice',
+    title: 'One question. A mirror. Two minutes.',
+    body: 'No writing required. No interpretation needed. You pause, you notice, you see what is forming — and you come back tomorrow.',
+    phone_question: 'What has been quietly taking more space inside you lately?',
+    phone_options: [
+      'A decision I haven’t made',
+      'A conversation I’m avoiding',
+      'A version of myself I keep performing',
+      'A pressure I’ve normalized',
+    ],
+    phone_step1: 'Pause',
+    phone_step2: 'Notice',
+    phone_step2_text: 'You may not be lacking clarity. You may be carrying too many unresolved tabs.',
+    phone_step3: 'Return',
+    phone_step3_text: 'This week’s strongest signal: energy spent maintaining appearances.',
+    flow: [
+      { label: 'Pause', desc: 'One clear question. Simple, recognizable options. You are not asked to write — just to notice.' },
+      { label: 'Answer', desc: 'Select what feels closest. No judgement. No correct answer. Just a signal.' },
+      { label: 'Notice', desc: 'A short reflection surfaces — not advice, not diagnosis. Just a mirror of what your responses are forming.' },
+      { label: 'Return', desc: 'Come back tomorrow. Over time, patterns emerge. Mirar shows you what you carry, avoid, repeat, and outgrow.' },
+    ],
+    footer: 'Two minutes. Every day. That is the practice.',
+  },
+
+  alignment_loop: {
+    eyebrow: 'The Practice',
+    title_line1: 'The practice has four movements.',
+    title_em: 'It repeats.',
+    nodes: [
+      { label: 'Awareness', desc: 'Notice what is actually present — not what you expect to feel.' },
+      { label: 'Realignment', desc: 'Understand where drift has happened and what needs adjusting.' },
+      { label: 'Intentional Action', desc: 'Make one small move that closes the gap between signal and intent.' },
+      { label: 'Reflection', desc: 'See the pattern that only becomes visible across days and weeks.' },
+    ],
+    center_repeat: 'REPEAT',
+    center_every_day: 'every day',
+  },
+
+  six_dimensions: {
+    eyebrow: 'Six Dimensions',
+    title_line1: 'Six areas of inner life.',
+    title_em: 'Each one shows up every day.',
+    body: 'Mirar tracks all six. Not to score you — to show you where you actually are.',
+    signal_label: 'signal',
+    dimensions: [
+      { name: 'Direction', full: 'Inner Alignment & Purpose', desc: 'Are you moving toward what actually matters to you?' },
+      { name: 'Energy', full: 'Energy & Wellbeing', desc: 'Does your energy match what your life requires of you?' },
+      { name: 'Attention', full: 'Focus & Flow', desc: 'Are you spending attention on what actually matters?' },
+      { name: 'Connection', full: 'Relational Capital', desc: 'Are your closest relationships nourishing or draining you?' },
+      { name: 'Growth', full: 'Growth & Learning', desc: 'Are you still expanding, or quietly becoming smaller?' },
+      { name: 'Movement', full: 'Resilience & Action', desc: 'When things get hard, do you move through them or freeze?' },
+    ],
+  },
+
+  reflections: {
+    eyebrow: 'What people notice.',
+    quotes: [
+      'I realized I wasn’t burnt out. I was misaligned.',
+      'This was the first time I answered honestly.',
+      'I stopped trying to optimize myself.',
+      'I finally understood what I was feeling.',
+    ],
+  },
+
+  founder_note: {
+    eyebrow: 'From the founder',
+    title: 'A note from the founder.',
+    p1: 'Mirar began as a simple question I could not ignore: what if we checked in with our inner world as regularly as we check everything else?',
+    p2: 'The first beta gave us a real signal. People do want this. But the experience had to become simpler, lighter, and easier to return to.',
+    p3: 'So instead of stretching the old beta, we rebuilt Mirar from scratch — around the real habit: a small daily act of emotional and mental hygiene.',
+    p4_line1: 'Not to optimize who you are.',
+    p4_line2: 'Not to fix your life.',
+    p4_line3: 'To notice what is already happening inside you, more consistently.',
+    p5: 'Mirar is free. It will always be free. If it changes something in you — even one moment of clarity you would not have had otherwise — you can offer something in return. Anything from ₹10 to whatever feels right. That is how we sustain this.',
+    name: 'Dr. Sahil Haria, PhD',
+    role: 'Founder, Mirar',
+    closing: 'If this landed for you — begin your first reflection now. It takes two minutes.',
+    cta: 'Begin Your Reflection',
+  },
+
+  begin_cta: {
+    eyebrow: 'Begin',
+    title_line1: 'Two minutes a day.',
+    title_line2: 'Every day.',
+    title_em: 'That’s the practice.',
+    body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
+    cta: 'Begin Your Reflection',
+    note: 'No account required to begin. Pay only if it’s worth something to you.',
+  },
+
+  footer: {
+    tagline: 'Emotional and mental hygiene for everyday life.',
+    subtagline: 'Built for noticing. Not optimizing.',
+    follow_rebuild: 'Follow the rebuild',
+  },
+
+  language_switcher: {
+    label: 'Language',
+  },
+}

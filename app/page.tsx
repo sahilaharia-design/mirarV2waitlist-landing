@@ -1,33 +1,35 @@
 import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import WhyMirar from '@/components/WhyMirar'
-import BetaLearnings from '@/components/BetaLearnings'
-import WhatComesNext from '@/components/WhatComesNext'
-import MidCTA from '@/components/MidCTA'
+import TheGap from '@/components/TheGap'
+import WithoutPractice from '@/components/WithoutPractice'
+import WhyNow from '@/components/WhyNow'
+import FirstPractice from '@/components/FirstPractice'
 import ProductPreview from '@/components/ProductPreview'
+import AlignmentLoop from '@/components/AlignmentLoop'
+import SixDimensions from '@/components/SixDimensions'
+import Reflections from '@/components/Reflections'
 import FounderNote from '@/components/FounderNote'
-import Waitlist from '@/components/Waitlist'
+import BeginCTA from '@/components/BeginCTA'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <>
-      {/* Announcement bar scrolls away naturally */}
       <AnnouncementBar />
-
-      {/* Header is sticky — sticks once announcement bar scrolls off */}
       <Header />
-
       <main>
         <Hero />
-        <WhyMirar />
-        <BetaLearnings />
-        <WhatComesNext />
-        <MidCTA />
+        <TheGap />
+        <WithoutPractice />
+        <WhyNow />
+        <FirstPractice />
         <ProductPreview />
+        <AlignmentLoop />
+        <SixDimensions />
+        <Reflections />
         <FounderNote />
-        <Waitlist />
+        <BeginCTA />
         <Footer />
       </main>
     </>
