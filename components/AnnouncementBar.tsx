@@ -5,7 +5,7 @@ import { useTranslation } from '@/lib/i18n'
 export default function AnnouncementBar() {
   const { t } = useTranslation()
   return (
-    <div className="bg-dark-section text-ivory/50 text-[11px] font-sans tracking-wide">
+    <div className="bg-dark-section text-ivory/75 text-xs font-sans tracking-wide">
       <div className="max-w-container mx-auto px-4 sm:px-6 h-9 flex items-center justify-between gap-3">
         <span className="truncate min-w-0">
           <span className="hidden sm:inline">{t('announcement_bar.text_full')}</span>

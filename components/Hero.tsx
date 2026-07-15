@@ -12,6 +12,8 @@ import { useTranslation } from '@/lib/i18n'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 
+const DIMENSION_COLORS = ['#7C6FA0', '#C07840', '#4A7CA8', '#6A9870', '#A0884A', '#B85A4A']
+
 const SIGNAL_CHIP_KEYS = [
   { key: 'carrying',   x: '8%',  y: '12%', delay: '0s',    dur: '4.5s' },
   { key: 'avoiding',   x: '55%', y: '8%',  delay: '0.8s',  dur: '5.2s' },
@@ -115,18 +117,24 @@ export default function Hero() {
 
             <motion.h1
               variants={lineVariant}
-              className="font-serif text-[38px] sm:text-[48px] lg:text-[54px] leading-[1.1] font-light text-charcoal mb-6"
+              className="font-serif text-[42px] sm:text-[54px] lg:text-[60px] leading-[1.08] font-medium text-charcoal mb-7"
             >
               {t('hero.title_line1')}<br className="hidden sm:block" /> {t('hero.title_line2')}{' '}
-              <em>{t('hero.title_except')}</em>
+              <em className="text-peach not-italic">{t('hero.title_except')}</em>
             </motion.h1>
 
             <motion.p
               variants={lineVariant}
-              className="font-sans text-[17px] text-text-secondary leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0"
+              className="font-sans text-[19px] sm:text-[20px] text-text-secondary leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
             >
               {t('hero.body')}
             </motion.p>
+
+            <motion.div variants={lineVariant} className="flex items-center gap-2 mb-10 justify-center lg:justify-start">
+              {DIMENSION_COLORS.map((c) => (
+                <span key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />
+              ))}
+            </motion.div>
 
             <motion.div variants={lineVariant}>
               <a
@@ -142,7 +150,7 @@ export default function Hero() {
                 <span aria-hidden>→</span>
               </a>
 
-              <p className="mt-4 font-sans text-[12px] text-text-secondary/60 tracking-wide">
+              <p className="mt-4 font-sans text-[13px] text-text-secondary/80 tracking-wide">
                 {t('hero.cta_note')}
               </p>
             </motion.div>

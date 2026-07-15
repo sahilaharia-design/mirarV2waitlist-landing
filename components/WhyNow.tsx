@@ -56,22 +56,22 @@ export default function WhyNow() {
   const { t, tList } = useTranslation()
   const rituals = tList('why_now.rituals').map((r: any, i: number) => ({ ...r, ...RITUAL_ICONS[i] }))
   return (
-    <section id="why" className="py-14 sm:py-20 lg:py-24 bg-ivory">
+    <section id="why" className="py-12 sm:py-16 lg:py-20 bg-ivory">
       <div className="max-w-container mx-auto px-6">
 
         <div className="max-w-2xl mb-5 sr sr-header">
-          <h2 className="font-serif text-4xl sm:text-5xl font-light leading-[1.1] text-charcoal mb-6">
+          <h2 className="font-serif text-4xl sm:text-5xl font-medium leading-[1.1] text-charcoal mb-6">
             {t('why_now.title_line1')}{' '}
-            <em>{t('why_now.title_em')}</em>
+            <em className="text-peach not-italic">{t('why_now.title_em')}</em>
           </h2>
           <div className="space-y-4">
-            <p className="font-sans text-base text-text-secondary leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-text-secondary leading-relaxed">
               {t('why_now.body1')}
             </p>
-            <p className="font-sans text-base text-text-secondary leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-text-secondary leading-relaxed">
               {t('why_now.body2')}
             </p>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed font-medium">
+            <p className="font-sans text-base sm:text-lg text-charcoal/80 leading-relaxed font-medium">
               {t('why_now.body3')}
             </p>
           </div>
@@ -98,11 +98,11 @@ export default function WhyNow() {
                 <p className={`font-serif text-base font-medium leading-snug ${r.dark ? 'text-ivory' : 'text-charcoal'}`}>
                   {r.label}
                 </p>
-                <p className={`font-sans text-[10px] tracking-[0.12em] uppercase mt-0.5 ${r.dark ? 'text-peach/70' : 'text-text-secondary'}`}>
+                <p className={`font-sans text-[11px] tracking-[0.12em] uppercase mt-0.5 ${r.dark ? 'text-peach/80' : 'text-text-secondary'}`}>
                   {r.sub}
                 </p>
               </div>
-              <p className={`font-sans text-xs leading-relaxed ${r.dark ? 'text-ivory/60' : 'text-text-secondary'}`}>
+              <p className={`font-sans text-sm leading-relaxed ${r.dark ? 'text-ivory/75' : 'text-text-secondary'}`}>
                 {r.desc}
               </p>
             </div>

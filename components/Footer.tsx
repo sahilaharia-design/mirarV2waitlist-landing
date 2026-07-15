@@ -59,12 +59,12 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-charcoal/8 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="font-sans text-xs text-text-secondary/55">
+          <span className="font-sans text-xs text-text-secondary/70">
             © {new Date().getFullYear()} Mirar
           </span>
           <a
             href="mailto:info@mirar.life"
-            className="font-sans text-xs text-text-secondary/65 hover:text-charcoal transition-colors duration-200"
+            className="font-sans text-sm font-medium text-charcoal/80 hover:text-peach transition-colors duration-200"
           >
             info@mirar.life
           </a>

@@ -22,16 +22,16 @@ export default function AlignmentLoop() {
   const { t, tList } = useTranslation()
   const NODES = tList('alignment_loop.nodes').map((n: any, i: number) => ({ ...n, ...NODE_META[i] }))
   return (
-    <section id="practice" className="py-20 sm:py-28 bg-dark-section text-ivory">
+    <section id="practice" className="py-16 sm:py-24 bg-dark-section text-ivory">
       <div className="max-w-container mx-auto px-4 sm:px-6">
 
         <div className="max-w-2xl mb-14 sr">
-          <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-peach/70 mb-4">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-peach/80 mb-4">
             {t('alignment_loop.eyebrow')}
           </p>
-          <h2 className="font-serif text-[32px] sm:text-[40px] font-light text-ivory leading-[1.15]">
+          <h2 className="font-serif text-[32px] sm:text-[40px] font-medium text-ivory leading-[1.15]">
             {t('alignment_loop.title_line1')}{' '}
-            <em>{t('alignment_loop.title_em')}</em>
+            <em className="text-peach not-italic">{t('alignment_loop.title_em')}</em>
           </h2>
         </div>
 
@@ -161,8 +161,8 @@ export default function AlignmentLoop() {
                   style={{ background: node.color, opacity: 0.85 }}
                 />
                 <div>
-                  <p className="font-sans text-[13px] font-medium text-ivory/80 mb-1">{node.label}</p>
-                  <p className="font-sans text-[14px] text-ivory/45 leading-relaxed">{node.desc}</p>
+                  <p className="font-sans text-sm font-medium text-ivory/90 mb-1">{node.label}</p>
+                  <p className="font-sans text-[15px] text-ivory/65 leading-relaxed">{node.desc}</p>
                 </div>
               </div>
             ))}

@@ -14,17 +14,17 @@ export default function FirstPractice() {
   const isInView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section className="py-20 sm:py-28 bg-ivory">
+    <section className="py-14 sm:py-20 bg-ivory">
       <div className="max-w-container mx-auto px-4 sm:px-6">
 
         <div className="max-w-2xl mb-16 sr sr-header">
-          <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-peach mb-4">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-peach mb-4">
             {t('first_practice.eyebrow')}
           </p>
-          <h2 className="font-serif text-[32px] sm:text-[40px] font-light text-charcoal leading-[1.15] mb-5">
+          <h2 className="font-serif text-[32px] sm:text-[40px] font-medium text-charcoal leading-[1.15] mb-5">
             {t('first_practice.title')}
           </h2>
-          <p className="font-sans text-base text-text-secondary leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-text-secondary leading-relaxed">
             {t('first_practice.body')}
           </p>
         </div>
@@ -75,10 +75,10 @@ export default function FirstPractice() {
                   </div>
 
                   <div className="pt-2.5">
-                    <p className="font-serif text-[18px] text-charcoal font-medium mb-1 leading-snug">
+                    <p className="font-serif text-[20px] text-charcoal font-medium mb-1 leading-snug">
                       {step.label}
                     </p>
-                    <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    <p className="font-sans text-[15px] text-text-secondary leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

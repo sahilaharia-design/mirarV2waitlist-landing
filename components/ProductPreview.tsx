@@ -12,13 +12,13 @@ export default function ProductPreview() {
       <div className="max-w-container mx-auto px-6">
         {/* Header */}
         <div className="max-w-xl mb-14 lg:mb-16">
-          <p className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/30 mb-3">
+          <p className="font-sans text-xs tracking-[0.22em] uppercase text-peach/80 mb-3">
             {t('product_preview.eyebrow')}
           </p>
-          <h2 className="font-serif text-4xl sm:text-5xl font-light text-ivory leading-[1.1] mb-5">
+          <h2 className="font-serif text-4xl sm:text-5xl font-medium text-ivory leading-[1.1] mb-5">
             {t('product_preview.title')}
           </h2>
-          <p className="font-sans text-base text-ivory/50 leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-ivory/70 leading-relaxed">
             {t('product_preview.body')}
           </p>
         </div>
@@ -147,21 +147,21 @@ export default function ProductPreview() {
           <div className="flex-1 flex flex-col gap-7 pt-2">
             {flow.map((item, i) => (
               <div key={i} className="flex gap-5 items-start">
-                <span className="font-sans text-[11px] tracking-[0.18em] text-peach/60 mt-0.5 flex-shrink-0">
+                <span className="font-sans text-xs tracking-[0.18em] text-peach/80 mt-0.5 flex-shrink-0">
                   {flowSteps[i]}
                 </span>
                 <div>
-                  <h3 className="font-serif text-xl font-light text-ivory mb-1.5">
+                  <h3 className="font-serif text-xl font-medium text-ivory mb-1.5">
                     {item.label}
                   </h3>
-                  <p className="font-sans text-sm text-ivory/45 leading-relaxed">
+                  <p className="font-sans text-[15px] text-ivory/65 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
               </div>
             ))}
 
-            <p className="font-sans text-[11px] text-ivory/20 tracking-wide mt-2">
+            <p className="font-sans text-xs text-ivory/45 tracking-wide mt-2">
               {t('product_preview.footer')}
             </p>
           </div>

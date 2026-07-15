@@ -1,6 +1,6 @@
 export default {
   announcement_bar: {
-    text_full: 'Mirar is live. Try it first — pay what feels right after.',
+    text_full: 'Mirar is live. Two minutes a day. Try it first.',
     text_short: 'Mirar is live. Try it first.',
     follow_full: 'Follow the journey',
     follow_short: 'Follow',
@@ -26,7 +26,7 @@ export default {
     title_except: 'Except one.',
     body: 'We built medicine for the body, finance for money, calendars for time, education for the mind. The inner world — what’s actually driving your choices each day — has no system. Mirar is the first.',
     cta: 'Begin Your Reflection',
-    cta_note: 'No price tag. Offer what it’s worth to you, after.',
+    cta_note: 'Two minutes a day. No account required to begin.',
     day_chip: 'Day 7 · Cycle 1',
     status: 'ALIGNED',
     signal_chips: {
@@ -180,7 +180,7 @@ export default {
     p4_line1: 'Not to optimize who you are.',
     p4_line2: 'Not to fix your life.',
     p4_line3: 'To notice what is already happening inside you, more consistently.',
-    p5: 'Mirar is free. It will always be free. If it changes something in you — even one moment of clarity you would not have had otherwise — you can offer something in return. Anything from ₹10 to whatever feels right. That is how we sustain this.',
+    p5: 'If Mirar changes something in you — even one moment of clarity you would not have had otherwise — I would genuinely like to hear about it. Write to us at info@mirar.life. Feedback, questions, or just to say hello — that is how we build this together.',
     name: 'Dr. Sahil Haria, PhD',
     role: 'Founder, Mirar',
     closing: 'If this landed for you — begin your first reflection now. It takes two minutes.',
@@ -194,7 +194,7 @@ export default {
     title_em: 'That’s the practice.',
     body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
     cta: 'Begin Your Reflection',
-    note: 'No account required to begin. Pay only if it’s worth something to you.',
+    note: 'No credit card, no commitment. Just two minutes a day.',
   },
 
   footer: {

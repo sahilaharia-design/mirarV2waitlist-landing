@@ -11,17 +11,17 @@ export default function WithoutPractice() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="py-20 sm:py-28 bg-dark-section text-ivory">
+    <section className="py-16 sm:py-24 bg-dark-section text-ivory">
       <div className="max-w-container mx-auto px-4 sm:px-6">
 
         <div className="max-w-2xl mb-14 sr sr-header">
-          <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-peach/70 mb-4">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-peach/80 mb-4">
             {t('without_practice.eyebrow')}
           </p>
-          <h2 className="font-serif text-[32px] sm:text-[40px] font-light text-ivory leading-[1.15] mb-5">
+          <h2 className="font-serif text-[32px] sm:text-[40px] font-medium text-ivory leading-[1.15] mb-5">
             {t('without_practice.title')}
           </h2>
-          <p className="font-sans text-base text-ivory/50 leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-ivory/70 leading-relaxed">
             {t('without_practice.body')}
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function WithoutPractice() {
                 style={{ width: 84, height: 84, border: '1px solid rgba(246,241,232,0.03)' }}
               />
 
-              <p className="font-serif text-lg font-light text-ivory/75 leading-relaxed relative z-10">
+              <p className="font-serif text-lg text-ivory/85 leading-relaxed relative z-10">
                 {text}
               </p>
             </motion.div>

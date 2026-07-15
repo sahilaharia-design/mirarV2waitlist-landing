@@ -15,18 +15,18 @@ export default function SixDimensions() {
   const { t, tList } = useTranslation()
   const DIMENSIONS = tList('six_dimensions.dimensions').map((d: any, i: number) => ({ ...d, ...DIMENSION_META[i] }))
   return (
-    <section id="dimensions" className="py-20 sm:py-28 bg-ivory">
+    <section id="dimensions" className="py-16 sm:py-24 bg-ivory">
       <div className="max-w-container mx-auto px-4 sm:px-6">
 
         <div className="max-w-2xl mb-14 sr">
-          <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-text-secondary/50 mb-4">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-text-secondary/70 mb-4">
             {t('six_dimensions.eyebrow')}
           </p>
-          <h2 className="font-serif text-[32px] sm:text-[40px] font-light text-charcoal leading-[1.15]">
+          <h2 className="font-serif text-[32px] sm:text-[40px] font-medium text-charcoal leading-[1.15]">
             {t('six_dimensions.title_line1')}{' '}
-            <em>{t('six_dimensions.title_em')}</em>
+            <em className="text-peach not-italic">{t('six_dimensions.title_em')}</em>
           </h2>
-          <p className="mt-4 font-sans text-[16px] text-text-secondary leading-relaxed">
+          <p className="mt-4 font-sans text-[17px] sm:text-lg text-text-secondary leading-relaxed">
             {t('six_dimensions.body')}
           </p>
         </div>

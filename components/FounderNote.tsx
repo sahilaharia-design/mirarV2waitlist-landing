@@ -45,7 +45,7 @@ export default function FounderNote() {
               {t('founder_note.title')}
             </h2>
 
-            <div className="font-sans text-base text-text-secondary leading-loose space-y-4">
+            <div className="font-sans text-base sm:text-lg text-text-secondary leading-loose space-y-4">
               <p>{t('founder_note.p1')}</p>
               <p>{t('founder_note.p2')}</p>
               <p>{t('founder_note.p3')}</p>

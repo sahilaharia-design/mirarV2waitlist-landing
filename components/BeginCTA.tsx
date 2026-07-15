@@ -11,17 +11,17 @@ export default function BeginCTA() {
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="max-w-lg mx-auto text-center sr">
 
-          <p className="font-sans text-[11px] tracking-[0.2em] uppercase text-peach/70 mb-6">
+          <p className="font-sans text-xs tracking-[0.2em] uppercase text-peach/80 mb-6">
             {t('begin_cta.eyebrow')}
           </p>
 
-          <h2 className="font-serif text-[32px] sm:text-[40px] font-light text-ivory leading-[1.15] mb-6">
+          <h2 className="font-serif text-[32px] sm:text-[40px] font-medium text-ivory leading-[1.15] mb-6">
             {t('begin_cta.title_line1')}<br />
             {t('begin_cta.title_line2')}<br />
-            <em>{t('begin_cta.title_em')}</em>
+            <em className="text-peach not-italic">{t('begin_cta.title_em')}</em>
           </h2>
 
-          <p className="font-sans text-[16px] text-ivory/50 leading-relaxed mb-10">
+          <p className="font-sans text-base sm:text-lg text-ivory/70 leading-relaxed mb-10">
             {t('begin_cta.body')}
           </p>
 
@@ -38,7 +38,7 @@ export default function BeginCTA() {
             <span aria-hidden>→</span>
           </a>
 
-          <p className="mt-5 font-sans text-[12px] text-ivory/25 tracking-wide">
+          <p className="mt-5 font-sans text-[13px] text-ivory/60 tracking-wide">
             {t('begin_cta.note')}
           </p>
 
