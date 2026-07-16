@@ -100,3 +100,9 @@ section[id] {
   0%, 100% { filter: drop-shadow(0 0 4px rgba(217,154,115,0.4)); }
   50%       { filter: drop-shadow(0 0 10px rgba(217,154,115,0.75)); }
 }
+
+/* ── Hero signal compass needle — sweeps in from center-rest to its reading ── */
+@keyframes needle-settle {
+  from { transform: rotate(-35deg); }
+  to   { transform: rotate(0deg); }
+}

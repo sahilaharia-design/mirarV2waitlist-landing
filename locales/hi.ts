@@ -28,7 +28,7 @@ export default {
     cta: 'अपना प्रतिबिंब शुरू करें',
     cta_note: 'दिन में दो मिनट। शुरू करने के लिए खाते की ज़रूरत नहीं।',
     day_chip: 'दिन 7 · चक्र 1',
-    status: 'संरेखित',
+    status: 'अभी बन रहा है',
     signal_chips: {
       carrying: 'ढो रहे हैं',
       avoiding: 'टाल रहे हैं',

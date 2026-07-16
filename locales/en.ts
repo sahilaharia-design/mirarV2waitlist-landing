@@ -28,7 +28,7 @@ export default {
     cta: 'Begin Your Reflection',
     cta_note: 'Two minutes a day. No account required to begin.',
     day_chip: 'Day 7 · Cycle 1',
-    status: 'ALIGNED',
+    status: 'Forming',
     signal_chips: {
       carrying: 'carrying',
       avoiding: 'avoiding',

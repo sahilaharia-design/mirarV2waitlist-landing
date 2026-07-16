@@ -28,7 +28,7 @@ export default {
     cta: 'તમારું પ્રતિબિંબ શરૂ કરો',
     cta_note: 'દિવસના બે મિનિટ. શરૂ કરવા ખાતાની જરૂર નથી.',
     day_chip: 'દિવસ 7 · ચક્ર 1',
-    status: 'સંરેખિત',
+    status: 'હજી બની રહ્યું છે',
     signal_chips: {
       carrying: 'વહન કરી રહ્યા',
       avoiding: 'ટાળી રહ્યા',

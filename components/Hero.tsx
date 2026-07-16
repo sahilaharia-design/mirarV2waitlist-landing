@@ -234,32 +234,24 @@ export default function Hero() {
                   />
                 ))}
 
-                {/* Alignment ring — the product's core visual */}
-                <div className="absolute left-1/2 top-[47%] -translate-x-1/2 -translate-y-1/2">
-                  <svg width="168" height="168" viewBox="0 0 168 168">
-                    {/* Outer depth rings */}
-                    <circle cx="84" cy="84" r="80" fill="none" stroke="rgba(28,26,23,0.04)" strokeWidth="1"/>
-                    <circle cx="84" cy="84" r="70" fill="none" stroke="rgba(28,26,23,0.03)" strokeWidth="1"/>
-                    {/* Track */}
-                    <circle cx="84" cy="84" r="58" fill="none" stroke="rgba(28,26,23,0.07)" strokeWidth="8.5"/>
-                    {/* Progress arc — 72% aligned, animated draw-on */}
-                    <circle
-                      cx="84" cy="84" r="58"
-                      fill="none"
-                      stroke="#D99A73"
-                      strokeWidth="8.5"
-                      strokeDasharray="364.4"
-                      strokeDashoffset="102"
-                      strokeLinecap="round"
-                      transform="rotate(-90 84 84)"
-                      style={{ animation: 'arc-draw 1.8s cubic-bezier(0.22,1,0.36,1) 0.5s both, arc-glow-pulse 3s ease-in-out 2.5s infinite' } as any}
+                {/* Signal compass — the same needle-and-zone gauge the app itself uses.
+                    No numeric score: Mirar never shows one, so the hero shouldn't either. */}
+                <div className="absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2">
+                  <svg width="176" height="140" viewBox="0 0 176 140">
+                    {/* Four zone arcs — Under Load, Stabilizing, Forming, Aligned */}
+                    <path d="M 16 100 A 72 72 0 0 1 40.9 43.8" fill="none" stroke="#C47058" strokeWidth="11" strokeLinecap="round" opacity="0.55"/>
+                    <path d="M 40.9 43.8 A 72 72 0 0 1 74.7 18.1" fill="none" stroke="#6B8FB5" strokeWidth="11" strokeLinecap="round" opacity="0.55"/>
+                    <path d="M 74.7 18.1 A 72 72 0 0 1 132.2 30.6" fill="none" stroke="#D4A843" strokeWidth="11" strokeLinecap="round" opacity="0.55"/>
+                    <path d="M 132.2 30.6 A 72 72 0 0 1 160 100" fill="none" stroke="#5B8C5A" strokeWidth="11" strokeLinecap="round" opacity="0.55"/>
+                    {/* Needle — resting mid "Forming", animated sweep in from center */}
+                    <line
+                      x1="88" y1="100" x2="121" y2="52"
+                      stroke="#1C1A17" strokeWidth="2.5" strokeLinecap="round"
+                      style={{ transformOrigin: '88px 100px', animation: 'needle-settle 1.4s cubic-bezier(0.22,1,0.36,1) 0.5s both' } as any}
                     />
-                    {/* Score */}
-                    <text x="84" y="78" textAnchor="middle" fill="rgba(28,26,23,0.82)" fontSize="26" fontWeight="200" fontFamily="Georgia, serif" letterSpacing="-1">72</text>
-                    {/* Status */}
-                    <text x="84" y="94" textAnchor="middle" fill="rgba(28,26,23,0.32)" fontSize="8.5" fontFamily="system-ui, sans-serif" letterSpacing="0.16em">{t('hero.status')}</text>
-                    {/* Trend */}
-                    <text x="84" y="110" textAnchor="middle" fill="rgba(217,154,115,0.65)" fontSize="11">↑</text>
+                    <circle cx="88" cy="100" r="5" fill="#1C1A17"/>
+                    {/* Status word — no number, sits below the pivot so the needle never crosses it */}
+                    <text x="88" y="124" textAnchor="middle" fill="rgba(28,26,23,0.82)" fontSize="15" fontFamily="Georgia, serif" fontStyle="italic">{t('hero.status')}</text>
                   </svg>
                 </div>
 
