@@ -194,7 +194,7 @@ export default {
     title_em: 'That’s the practice.',
     body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
     cta: 'Begin Your Reflection',
-    note: 'No credit card, no commitment. Just two minutes a day.',
+    note: 'No account required to begin. Just two minutes a day.',
   },
 
   footer: {

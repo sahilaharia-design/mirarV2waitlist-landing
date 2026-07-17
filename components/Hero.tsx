@@ -42,17 +42,7 @@ const PARTICLES = Array.from({ length: 12 }, (_, i) => ({
   color: i % 2 === 0 ? 'rgba(217,154,115,0.18)' : 'rgba(185,139,255,0.14)',
 }))
 
-const textVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-}
-
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
-
-const lineVariant = {
-  hidden: { opacity: 0, y: 22 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } },
-}
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -101,22 +91,21 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
 
           {/* Left — text column with parallax + Framer entrance */}
-          <motion.div
-            className="flex-1 max-w-xl text-center lg:text-left"
-            style={{ y: textY }}
-            variants={textVariants}
-            initial="hidden"
-            animate="visible"
-          >
+          <div className="flex-1 max-w-xl text-center lg:text-left">
+            <motion.div style={{ y: textY }}>
             <motion.p
-              variants={lineVariant}
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: EASE, delay: 0 }}
               className="font-sans text-[11px] tracking-[0.2em] uppercase text-peach mb-6"
             >
               {t('hero.eyebrow')}
             </motion.p>
 
             <motion.h1
-              variants={lineVariant}
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: EASE, delay: 0.12 }}
               className="font-serif text-[42px] sm:text-[54px] lg:text-[60px] leading-[1.08] font-medium text-charcoal mb-7"
             >
               {t('hero.title_line1')}<br className="hidden sm:block" /> {t('hero.title_line2')}{' '}
@@ -124,19 +113,30 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              variants={lineVariant}
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: EASE, delay: 0.24 }}
               className="font-sans text-[19px] sm:text-[20px] text-text-secondary leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0"
             >
               {t('hero.body')}
             </motion.p>
 
-            <motion.div variants={lineVariant} className="flex items-center gap-2 mb-10 justify-center lg:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: EASE, delay: 0.36 }}
+              className="flex items-center gap-2 mb-10 justify-center lg:justify-start"
+            >
               {DIMENSION_COLORS.map((c) => (
                 <span key={c} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />
               ))}
             </motion.div>
 
-            <motion.div variants={lineVariant}>
+            <motion.div
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: EASE, delay: 0.48 }}
+            >
               <a
                 href={APP_URL}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-sans font-semibold text-[15px] transition-all duration-200 hover:scale-105 active:scale-95 animate-cta-pulse"
@@ -154,7 +154,8 @@ export default function Hero() {
                 {t('hero.cta_note')}
               </p>
             </motion.div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* Right — animated mirror oval */}
           <motion.div
