@@ -1,51 +1,43 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { DM_Sans, Instrument_Serif } from 'next/font/google'
 import './tailwind.css'
 import './globals.css'
 import AnimationObserver from '@/components/AnimationObserver'
 import { I18nProvider } from '@/lib/i18n'
 
-const cormorant = Cormorant_Garamond({
+const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['400'],
+  style: ['normal'],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-sans',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Mirar — Emotional Fitness Begins With Emotional Hygiene',
+  metadataBase: new URL('https://mirar.life'),
+  title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
   description:
-    'Mirar is your two-minute daily practice for your inner world. Not journaling. Not therapy. A clean read of your internal signals, every day.',
+    'One honest answer a day. Mirar helps you notice the signals and patterns shaping your inner life—without scoring, diagnosing, or telling you who to become.',
   openGraph: {
-    title: 'Mirar — Emotional Fitness Begins With Emotional Hygiene',
+    title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
     description:
-      'Two minutes a day. A mirror for your inner state. Build emotional fitness through daily emotional hygiene.',
+      'One honest answer a day. Notice what is quietly forming inside you.',
     siteName: 'Mirar',
     url: 'https://mirar.life',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: 'https://mirar.life/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Mirar — Beta V1 is complete. What comes next.',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mirar — The Next Version Is Coming',
-    description: 'A small daily mirror for your inner world.',
-    images: ['https://mirar.life/og-image.png'],
+    title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
+    description: 'One honest answer a day. Notice what is quietly forming inside you.',
   },
   robots: { index: true, follow: true },
 }
@@ -56,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="en" className={`${instrumentSerif.variable} ${dmSans.variable}`}>
       <body className="font-sans bg-ivory text-charcoal">
         <I18nProvider>
           {children}

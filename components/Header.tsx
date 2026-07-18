@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { useTranslation } from '@/lib/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -48,8 +49,21 @@ export default function Header() {
   }, [])
 
   useEffect(() => {
+    const main = document.querySelector('main')
+    const footer = document.querySelector('footer')
     document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (menuOpen) {
+      main?.setAttribute('inert', '')
+      footer?.setAttribute('inert', '')
+    } else {
+      main?.removeAttribute('inert')
+      footer?.removeAttribute('inert')
+    }
+    return () => {
+      document.body.style.overflow = ''
+      main?.removeAttribute('inert')
+      footer?.removeAttribute('inert')
+    }
   }, [menuOpen])
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
@@ -65,16 +79,16 @@ export default function Header() {
         <div
           className={`max-w-container mx-auto rounded-2xl px-4 sm:px-5 h-[54px] flex items-center justify-between gap-3 transition-all duration-300 ${
             scrolled
-              ? 'bg-ivory/96 backdrop-blur-lg shadow-lg border border-charcoal/12'
-              : 'bg-ivory/90 backdrop-blur-md shadow-sm border border-charcoal/8'
+              ? 'mirar-nav-shell--scrolled backdrop-blur-lg shadow-lg border border-charcoal/12'
+              : 'mirar-nav-shell--top backdrop-blur-md shadow-sm border border-charcoal/8'
           }`}
         >
           {/* Logo */}
           <a href="#" aria-label="Mirar home" className="hover:opacity-70 transition-opacity flex-shrink-0">
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <img src="/assets/brand/mirar-mark.png" alt="" aria-hidden width={20} height={30}
+              <Image src="/assets/brand/mirar-mark.png" alt="" aria-hidden width={20} height={30}
                 style={{ height: '28px', width: 'auto', display: 'block' }} />
-              <img src="/assets/brand/mirar-wordmark.png" alt="Mirar" width={68} height={24}
+              <Image src="/assets/brand/mirar-wordmark.png" alt="Mirar" width={68} height={24} priority
                 style={{ height: '22px', width: 'auto', display: 'block' }} />
             </span>
           </a>
@@ -109,7 +123,7 @@ export default function Header() {
           <a
             href={APP_URL}
             onClick={closeMenu}
-            className="flex-shrink-0 animate-cta-pulse inline-flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full font-sans font-semibold text-[12px] sm:text-[13px] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap"
+            className="flex-shrink-0 inline-flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full font-sans font-semibold text-[12px] sm:text-[13px] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',
               color: '#1C1A17',
@@ -137,15 +151,13 @@ export default function Header() {
       </header>
 
       {/* ── Mobile full-screen menu ── */}
+      {menuOpen && (
       <div
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        aria-hidden={!menuOpen}
-        className={`md:hidden fixed inset-0 z-40 bg-ivory transition-all duration-[250ms] flex flex-col ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className="md:hidden fixed inset-0 z-40 bg-ivory animate-fade-in flex flex-col"
       >
         <div className="h-[68px] flex-shrink-0" />
 
@@ -212,6 +224,7 @@ export default function Header() {
           </a>
         </div>
       </div>
+      )}
     </>
   )
 }

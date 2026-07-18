@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ivory: '#F6F1E8',
-        charcoal: '#1C1A17',
-        'text-secondary': '#6F675D',
-        peach: '#D99A73',
-        lavender: '#B98BFF',
-        'card-bg': '#EFE4D6',
-        'dark-section': '#2A2522',
+        ivory: '#F4F0EA',
+        charcoal: '#2A2A30',
+        'text-secondary': '#6B696E',
+        peach: '#C98E6B',
+        lavender: '#8BA5D4',
+        'card-bg': '#ECE6DE',
+        'dark-section': '#24242A',
       },
       fontFamily: {
         serif: ['var(--font-serif)', 'Georgia', 'serif'],

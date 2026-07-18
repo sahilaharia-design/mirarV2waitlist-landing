@@ -24,7 +24,7 @@ export default {
     title_line1: 'For every part of life,',
     title_line2: 'a daily practice.',
     title_except: 'Except one.',
-    body: 'We built medicine for the body, finance for money, calendars for time, education for the mind. The inner world — what’s actually driving your choices each day — has no system. Mirar is the first.',
+    body: 'A two-minute daily mirror for what is happening inside you. One honest answer becomes a signal. Over time, your signals become a pattern you can finally see.',
     cta: 'Begin Your Reflection',
     cta_note: 'Two minutes a day. No account required to begin.',
     day_chip: 'Day 7 · Cycle 1',
