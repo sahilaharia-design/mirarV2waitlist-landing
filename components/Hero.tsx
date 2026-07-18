@@ -21,6 +21,9 @@ export default function Hero() {
       <div className="hero-v2__grain" aria-hidden />
       <div className="hero-v2__wash hero-v2__wash--peach" aria-hidden />
       <div className="hero-v2__wash hero-v2__wash--blue" aria-hidden />
+      <div className="hero-v2__signals" aria-hidden>
+        <i /><i /><i /><i /><i />
+      </div>
 
       <div className="hero-v2__inner">
         <div className="hero-v2__copy">

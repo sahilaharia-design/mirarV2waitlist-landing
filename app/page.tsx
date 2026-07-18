@@ -7,10 +7,12 @@ import SixDimensions from '@/components/SixDimensions'
 import FounderNote from '@/components/FounderNote'
 import BeginCTA from '@/components/BeginCTA'
 import Footer from '@/components/Footer'
+import PageMotion from '@/components/PageMotion'
 
 export default function Home() {
   return (
     <>
+      <PageMotion />
       <AnnouncementBar />
       <Header />
       <main>

@@ -5,10 +5,10 @@ import { useRef } from 'react'
 import { useTranslation } from '@/lib/i18n'
 
 const SIGNALS = [
-  { day: '01', word: 'carrying', x: 29, color: '#B85A4A' },
-  { day: '03', word: 'avoiding', x: 43, color: '#6A8BB5' },
-  { day: '05', word: 'repeating', x: 58, color: '#B99748' },
-  { day: '07', word: 'noticing', x: 74, color: '#5A8A6A' },
+  { day: '01', word: 'carrying', x: 18, y: 62, color: '#B85A4A' },
+  { day: '03', word: 'avoiding', x: 39, y: 42, color: '#6A8BB5' },
+  { day: '05', word: 'repeating', x: 61, y: 67, color: '#B99748' },
+  { day: '07', word: 'noticing', x: 82, y: 35, color: '#5A8A6A' },
 ]
 
 export default function ProductPreview() {
@@ -35,19 +35,42 @@ export default function ProductPreview() {
           </div>
 
           <div className="pattern-story__canvas" aria-label="A visual example of daily signals becoming a pattern">
-            <div className="pattern-story__line" aria-hidden>
-              <motion.span
-                initial={{ scaleX: 0 }}
-                animate={inView ? { scaleX: 1 } : { scaleX: 0 }}
-                transition={{ duration: reduceMotion ? 0 : 1.4, ease: [0.22, 1, 0.36, 1] }}
+            <svg className="pattern-story__curve" viewBox="0 0 1000 330" preserveAspectRatio="none" aria-hidden>
+              <defs>
+                <linearGradient id="pattern-gradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stopColor="#B85A4A" />
+                  <stop offset="0.4" stopColor="#6A8BB5" />
+                  <stop offset="0.7" stopColor="#B99748" />
+                  <stop offset="1" stopColor="#5A8A6A" />
+                </linearGradient>
+                <linearGradient id="pattern-area" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stopColor="#8BA5D4" stopOpacity="0.17" />
+                  <stop offset="1" stopColor="#8BA5D4" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M 80 220 C 180 220 270 116 390 140 S 510 238 610 226 S 735 76 880 112 L 880 310 L 80 310 Z"
+                className="pattern-story__area"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ delay: reduceMotion ? 0 : 1.1, duration: 0.8 }}
               />
-            </div>
+              <motion.path
+                d="M 80 220 C 180 220 270 116 390 140 S 510 238 610 226 S 735 76 880 112"
+                className="pattern-story__path"
+                pathLength="1"
+                initial={{ pathLength: 0 }}
+                animate={inView ? { pathLength: 1 } : { pathLength: 0 }}
+                transition={{ duration: reduceMotion ? 0 : 1.8, ease: [0.22, 1, 0.36, 1] }}
+              />
+            </svg>
+            <div className="pattern-story__scan" aria-hidden />
 
             {SIGNALS.map((signal, index) => (
               <motion.div
                 key={signal.day}
                 className="pattern-signal"
-                style={{ left: `${signal.x}%`, '--signal-color': signal.color } as React.CSSProperties}
+                style={{ left: `${signal.x}%`, top: `${signal.y}%`, '--signal-color': signal.color } as React.CSSProperties}
                 initial={reduceMotion ? false : { opacity: 0, y: 16, scale: 0.85 }}
                 animate={inView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 16, scale: 0.85 }}
                 transition={{ delay: reduceMotion ? 0 : 0.25 + index * 0.18, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
