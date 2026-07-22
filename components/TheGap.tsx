@@ -87,6 +87,9 @@ export default function TheGap() {
         <p className="mt-10 font-serif text-xl italic text-charcoal/70 sr" style={{ transitionDelay: '480ms' }}>
           {t('the_gap.footer')}
         </p>
+        <p className="mt-4 font-sans text-base leading-relaxed text-text-secondary sr" style={{ transitionDelay: '560ms' }}>
+          {t('the_gap.footer_stakes')}
+        </p>
 
       </div>
     </section>

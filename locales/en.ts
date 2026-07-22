@@ -24,7 +24,7 @@ export default {
     title_line1: 'For every part of life,',
     title_line2: 'a daily practice.',
     title_except: 'Except one.',
-    body: 'A two-minute daily mirror for what is happening inside you. One honest answer becomes a signal. Over time, your signals become a pattern you can finally see.',
+    body: 'You’ve built habits for your body, your money, your time. The thing actually driving your choices — how you’re doing underneath it all — runs on autopilot. Two minutes today gives you a signal you can’t ignore next week, so drift gets caught while it’s still small.',
     cta: 'Begin Your Reflection',
     cta_note: 'Two minutes a day. No account required to begin.',
     day_chip: 'Day 7 · Cycle 1',
@@ -43,6 +43,7 @@ export default {
     title_em: 'entirely unbuilt.',
     body: 'Every important domain of human life has accumulated tools, systems, and daily practices. Every domain — except the one that runs beneath all of them.',
     footer: 'This is not an oversight. No one had built the instrument yet.',
+    footer_stakes: 'Without it, you don’t find out you’d drifted until it’s already cost you something — the burnout, the argument you can’t explain, the decision that didn’t feel like yours.',
     domains: [
       { label: 'Body', system: 'Fitness, nutrition, medicine' },
       { label: 'Money', system: 'Banking, budgets, investment' },
@@ -108,8 +109,10 @@ export default {
 
   product_preview: {
     eyebrow: 'The daily practice',
-    title: 'One question. A mirror. Two minutes.',
-    body: 'No writing required. No interpretation needed. You pause, you notice, you see what is forming — and you come back tomorrow.',
+    title: 'Catch what you’d otherwise only notice in hindsight.',
+    body: 'No writing, no interpretation required — you pause, you notice, and the pattern that was invisible yesterday finally has a shape. Two minutes, then you come back tomorrow.',
+    one_moment: 'One moment',
+    pattern_forming: 'A pattern, gently forming',
     phone_question: 'What has been quietly taking more space inside you lately?',
     phone_options: [
       'A decision I haven’t made',
@@ -125,7 +128,7 @@ export default {
     flow: [
       { label: 'Pause', desc: 'One clear question. Simple, recognizable options. You are not asked to write — just to notice.' },
       { label: 'Answer', desc: 'Select what feels closest. No judgement. No correct answer. Just a signal.' },
-      { label: 'Notice', desc: 'A short reflection surfaces — not advice, not diagnosis. Just a mirror of what your responses are forming.' },
+      { label: 'Notice', desc: 'A short reflection surfaces — not advice, not diagnosis. Just a mirror of what your responses are forming, so the thing you couldn’t name yesterday finally has a shape.' },
       { label: 'Return', desc: 'Come back tomorrow. Over time, patterns emerge. Mirar shows you what you carry, avoid, repeat, and outgrow.' },
     ],
     footer: 'Two minutes. Every day. That is the practice.',
@@ -149,7 +152,7 @@ export default {
     eyebrow: 'Six Dimensions',
     title_line1: 'Six areas of inner life.',
     title_em: 'Each one shows up every day.',
-    body: 'Mirar tracks all six. Not to score you — to show you where you actually are.',
+    body: 'Mirar tracks all six. Not to score you — to show you where you actually are, and catch the one that’s quietly slipping before it becomes the story of your month.',
     signal_label: 'signal',
     dimensions: [
       { name: 'Direction', full: 'Inner Alignment & Purpose', desc: 'Are you moving toward what actually matters to you?' },
@@ -192,7 +195,7 @@ export default {
     title_line1: 'Two minutes a day.',
     title_line2: 'Every day.',
     title_em: 'That’s the practice.',
-    body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
+    body: 'Two minutes today means next week’s decision doesn’t blindside you. Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
     cta: 'Begin Your Reflection',
     note: 'No account required to begin. Just two minutes a day.',
   },

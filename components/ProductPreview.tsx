@@ -30,8 +30,8 @@ export default function ProductPreview() {
 
         <div className="pattern-story">
           <div className="pattern-story__header">
-            <span>One moment</span>
-            <span>A pattern, gently forming</span>
+            <span>{t('product_preview.one_moment')}</span>
+            <span>{t('product_preview.pattern_forming')}</span>
           </div>
 
           <div className="pattern-story__canvas" aria-label="A visual example of daily signals becoming a pattern">
