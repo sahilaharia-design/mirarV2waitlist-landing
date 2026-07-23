@@ -63,11 +63,13 @@ export default function InteractiveMirror() {
     setSlide(1)
   }
 
-  const topline =
-    slide === 0 ? t('first_practice.preview_label')
-    : slide === 1 ? t('product_preview.phone_step2')
-    : slide === 2 ? t('mirror_carousel.topline_signals')
-    : t('mirror_carousel.topline_report')
+  const TOPLINE_KEYS = [
+    'first_practice.preview_label',
+    'product_preview.phone_step2',
+    'mirror_carousel.topline_signals',
+    'mirror_carousel.topline_report',
+  ]
+  const topline = t(TOPLINE_KEYS[slide])
 
   return (
     <div
@@ -86,11 +88,6 @@ export default function InteractiveMirror() {
         animate={{ opacity: 1, y: 0, rotateX: 0 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
       >
-        <div className="mirror-card__topline">
-          <span>{topline}</span>
-          <span className="mirror-card__privacy"><i aria-hidden /> Private by design</span>
-        </div>
-
         <AnimatePresence mode="wait">
           {slide === 0 && (
             <motion.div
@@ -100,6 +97,11 @@ export default function InteractiveMirror() {
               exit={reduceMotion ? { opacity: 0 } : { opacity: 0, x: -12 }}
               transition={{ duration: 0.35 }}
             >
+              <div className="mirror-card__topline">
+                <span>{topline}</span>
+                <span className="mirror-card__privacy"><i aria-hidden /> Private by design</span>
+              </div>
+
               <p className="mirror-card__instruction">{t('mirror_carousel.instruction')}</p>
               <h2 className="mirror-card__question">{t('first_practice.preview_question')}</h2>
 
@@ -145,6 +147,11 @@ export default function InteractiveMirror() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
+              <div className="mirror-card__topline">
+                <span>{topline}</span>
+                <span className="mirror-card__privacy"><i aria-hidden /> Private by design</span>
+              </div>
+
               <div className="mirror-compass" aria-hidden>
                 <svg width="176" height="140" viewBox="0 0 176 140">
                   {ZONES.map((zone) => (
@@ -193,6 +200,11 @@ export default function InteractiveMirror() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
+              <div className="mirror-card__topline">
+                <span>{topline}</span>
+                <span className="mirror-card__privacy"><i aria-hidden /> Private by design</span>
+              </div>
+
               <p className="mirror-signals__label">{t('mirror_carousel.signals_label')}</p>
               <div className="mirror-signals__coverage" aria-hidden>
                 {COVERAGE_PIPS.map((v, i) => (
@@ -228,6 +240,11 @@ export default function InteractiveMirror() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
+              <div className="mirror-card__topline">
+                <span>{topline}</span>
+                <span className="mirror-card__privacy"><i aria-hidden /> Private by design</span>
+              </div>
+
               <p className="mirror-reflection__status">{t('mirror_carousel.report_status')}</p>
               <p className="mirror-reflection__copy">{t('mirror_carousel.report_copy')}</p>
               <p className="mirror-reflection__boundary">{t('mirror_carousel.report_boundary')}</p>

@@ -350,8 +350,11 @@ section[id] {
 
 .mirror-card__topline {
   display: flex;
+  align-self: stretch;
+  width: 100%;
   justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--rule);
   color: rgba(42,42,48,0.52);
@@ -364,7 +367,7 @@ section[id] {
 .mirror-card__privacy { display: inline-flex; align-items: center; gap: 0.4rem; }
 .mirror-card__privacy i { width: 5px; height: 5px; border-radius: 50%; background: #5A8A6A; box-shadow: 0 0 0 4px rgba(90,138,106,0.1); }
 
-.mirror-card__instruction { margin: 1.3rem 0 0; color: rgba(42,42,48,0.48); font-family: var(--font-serif), serif; font-size: 0.88rem; }
+.mirror-card__instruction { margin: 0.3rem 0 0; color: rgba(42,42,48,0.48); font-family: var(--font-serif), serif; font-size: 0.88rem; }
 .mirror-card__question { max-width: 25rem; margin: 1rem 0 1.45rem; color: var(--color-charcoal); font-family: var(--font-serif), serif; font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.02; }
 .mirror-card__options { display: grid; gap: 0.55rem; }
 
