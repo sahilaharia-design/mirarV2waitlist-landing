@@ -75,8 +75,12 @@ export default function InteractiveMirror() {
     <div
       className="mirror-stage"
       aria-label="Try a private Mirar reflection"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      // Pointer-type gated: a touch tap fires "enter" with no matching
+      // "leave" ever coming (there's no hovering finger to lift off from),
+      // so gating on mouse-only pointer events keeps the auto-rotation
+      // from getting stuck paused forever on whatever slide was tapped.
+      onPointerEnter={(e) => { if (e.pointerType === 'mouse') setPaused(true) }}
+      onPointerLeave={(e) => { if (e.pointerType === 'mouse') setPaused(false) }}
     >
       <div className="mirror-stage__aurora" aria-hidden />
       <div className="mirror-stage__orb mirror-stage__orb--one" aria-hidden />
