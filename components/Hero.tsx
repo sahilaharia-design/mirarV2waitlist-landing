@@ -58,7 +58,7 @@ export default function Hero() {
 
         <div className="hero-v2__experience">
           <InteractiveMirror />
-          <p className="hero-v2__try-note"><span aria-hidden>↑</span> This is a real preview. Try it.</p>
+          <p className="hero-v2__try-note"><span aria-hidden>↑</span> {t('hero.try_note')}</p>
         </div>
       </div>
 

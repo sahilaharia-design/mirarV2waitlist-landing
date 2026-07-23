@@ -77,8 +77,8 @@ export default function ProductPreview() {
               >
                 <span className="pattern-signal__halo" aria-hidden />
                 <span className="pattern-signal__dot" aria-hidden />
-                <span className="pattern-signal__day">Day {signal.day}</span>
-                <span className="pattern-signal__word">{signal.word}</span>
+                <span className="pattern-signal__day">{t('product_preview.day_label')} {signal.day}</span>
+                <span className="pattern-signal__word">{t(`hero.signal_chips.${signal.word}`)}</span>
               </motion.div>
             ))}
 
@@ -88,9 +88,9 @@ export default function ProductPreview() {
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 18 }}
               transition={{ delay: reduceMotion ? 0 : 1.05, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span>What became visible</span>
-              <strong>Energy spent maintaining appearances.</strong>
-              <small>A reflection—not a verdict.</small>
+              <span>{t('product_preview.reading_label')}</span>
+              <strong>{t('product_preview.reading_text')}</strong>
+              <small>{t('product_preview.reading_note')}</small>
             </motion.div>
           </div>
         </div>

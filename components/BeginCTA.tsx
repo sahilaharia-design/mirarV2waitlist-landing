@@ -6,8 +6,9 @@ import { useTranslation } from '@/lib/i18n'
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 
 export default function BeginCTA() {
-  const { t } = useTranslation()
+  const { t, tList } = useTranslation()
   const reduceMotion = useReducedMotion()
+  const assurances = tList('begin_cta.assurances') as string[]
 
   return (
     <section className="begin-v2">
@@ -32,9 +33,9 @@ export default function BeginCTA() {
           <span className="primary-cta__arrow" aria-hidden>↗</span>
         </a>
         <div className="begin-v2__assurances">
-          <span>Two minutes</span>
-          <span>No account to begin</span>
-          <span>Your answers stay yours</span>
+          {assurances.map((a) => (
+            <span key={a}>{a}</span>
+          ))}
         </div>
       </motion.div>
     </section>

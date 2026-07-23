@@ -62,7 +62,7 @@ export default function SixDimensions() {
         </div>
 
         <p className="dimensions-v2__note">
-          Six lenses. One life. <span>Nothing is scored; everything is yours to interpret.</span>
+          {t('six_dimensions.footer_line1')} <span>{t('six_dimensions.footer_line2')}</span>
         </p>
       </div>
     </section>

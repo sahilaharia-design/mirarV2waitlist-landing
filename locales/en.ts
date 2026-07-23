@@ -27,6 +27,7 @@ export default {
     body: 'You’ve built habits for your body, your money, your time. The thing actually driving your choices — how you’re doing underneath it all — runs on autopilot. Two minutes today gives you a signal you can’t ignore next week, so drift gets caught while it’s still small.',
     cta: 'Begin Your Reflection',
     cta_note: 'Two minutes a day. No account required to begin.',
+    try_note: 'This is a real preview. Try it.',
     day_chip: 'Day 7 · Cycle 1',
     status: 'Forming',
     signal_chips: {
@@ -147,10 +148,15 @@ export default {
       { label: 'Return', desc: 'Come back tomorrow. Over time, patterns emerge. Mirar shows you what you carry, avoid, repeat, and outgrow.' },
     ],
     footer: 'Two minutes. Every day. That is the practice.',
+    day_label: 'Day',
+    reading_label: 'What became visible',
+    reading_text: 'Energy spent maintaining appearances.',
+    reading_note: 'A reflection—not a verdict.',
   },
 
   mirror_carousel: {
     instruction: 'Choose what feels closest. There is no right answer.',
+    continue_cta: 'See what this might be pointing to',
     reflection_status: 'Something is asking for attention.',
     reflection_boundary: 'Not advice. Not a diagnosis. Just a mirror for this moment.',
     choose_again: 'Choose again',
@@ -189,6 +195,8 @@ export default {
     title_em: 'how your day actually goes.',
     body: 'Mirar tracks all six. Not to score you — to show you where you actually are, and catch the one that’s quietly slipping before it becomes the story of your month.',
     signal_label: 'signal',
+    footer_line1: 'Six lenses. One life.',
+    footer_line2: 'Nothing is scored; everything is yours to interpret.',
     dimensions: [
       { name: 'Direction', full: 'Inner Alignment & Purpose', desc: 'Are you moving toward what actually matters to you?' },
       { name: 'Energy', full: 'Energy & Wellbeing', desc: 'Does your energy match what your life requires of you?' },
@@ -212,6 +220,8 @@ export default {
   founder_note: {
     eyebrow: 'From the founder',
     title: 'A note from the founder.',
+    portrait_caption_line1: 'Built from a question,',
+    portrait_caption_line2: 'not a category.',
     p1: 'Mirar began as a simple question I could not ignore: what if we checked in with our inner world as regularly as we check everything else?',
     p2: 'The first beta gave us a real signal. People do want this. But the experience had to become simpler, lighter, and easier to return to.',
     p3: 'So instead of stretching the old beta, we rebuilt Mirar from scratch — around the real habit: a small daily act of emotional and mental hygiene.',
@@ -233,6 +243,7 @@ export default {
     body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
     cta: 'Begin Your Reflection',
     note: 'No account required to begin. Just two minutes a day.',
+    assurances: ['Two minutes', 'No account to begin', 'Your answers stay yours'],
   },
 
   footer: {

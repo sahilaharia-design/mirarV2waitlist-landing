@@ -137,7 +137,7 @@ export default function InteractiveMirror() {
                 disabled={selected === null}
                 onClick={() => setSlide(1)}
               >
-                See what this might be pointing to <span aria-hidden>↗</span>
+                {t('mirror_carousel.continue_cta')} <span aria-hidden>↗</span>
               </button>
             </motion.div>
           )}

@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useTranslation } from '@/lib/i18n'
 
 const SOCIAL_LINKS = [
@@ -22,7 +23,7 @@ export default function Footer() {
           <div className="max-w-xs">
             {/* Full lockup: oval + Mirar + LOOK WITHIN. REALIGN. — 2508×1094 after trim */}
             <a href="#" aria-label="Mirar home" className="inline-block mb-4 hover:opacity-70 transition-opacity">
-              <img
+              <Image
                 src="/assets/brand/mirar-logo-full.png"
                 alt="Mirar — Look within. Realign."
                 width={92}

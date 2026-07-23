@@ -28,7 +28,7 @@ export default function FounderNote() {
             sizes="(max-width: 720px) 260px, 320px"
           />
           <div className="founder-v2__portrait-glow" aria-hidden />
-          <span className="founder-v2__portrait-caption">Built from a question,<br />not a category.</span>
+          <span className="founder-v2__portrait-caption">{t('founder_note.portrait_caption_line1')}<br />{t('founder_note.portrait_caption_line2')}</span>
         </motion.div>
 
         <motion.div
