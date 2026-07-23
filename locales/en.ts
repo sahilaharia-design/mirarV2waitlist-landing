@@ -38,9 +38,24 @@ export default {
     },
   },
 
+  recognition: {
+    eyebrow: 'Recognition',
+    title_line1: 'Some days, nothing is wrong.',
+    title_em: 'But something feels slightly off.',
+    statements: [
+      'I feel tired — but I don’t know why.',
+      'I’m moving forward, but not with clarity.',
+      'I keep putting off one conversation.',
+      'I react differently than I want to.',
+      'I’ve outgrown something but haven’t named it yet.',
+      'I don’t feel behind — but I don’t feel aligned either.',
+    ],
+    closing: 'That’s what Mirar is for.',
+  },
+
   the_gap: {
-    title_line1: 'We left one domain',
-    title_em: 'entirely unbuilt.',
+    title_line1: 'The one system missing from your life',
+    title_em: 'is the one running everything else.',
     body: 'Every important domain of human life has accumulated tools, systems, and daily practices. Every domain — except the one that runs beneath all of them.',
     footer: 'This is not an oversight. No one had built the instrument yet.',
     footer_stakes: 'Without it, you don’t find out you’d drifted until it’s already cost you something — the burnout, the argument you can’t explain, the decision that didn’t feel like yours.',
@@ -150,8 +165,8 @@ export default {
 
   six_dimensions: {
     eyebrow: 'Six Dimensions',
-    title_line1: 'Six areas of inner life.',
-    title_em: 'Each one shows up every day.',
+    title_line1: 'The parts of you that quietly decide',
+    title_em: 'how your day actually goes.',
     body: 'Mirar tracks all six. Not to score you — to show you where you actually are, and catch the one that’s quietly slipping before it becomes the story of your month.',
     signal_label: 'signal',
     dimensions: [
@@ -194,8 +209,8 @@ export default {
     eyebrow: 'Begin',
     title_line1: 'Two minutes a day.',
     title_line2: 'Every day.',
-    title_em: 'That’s the practice.',
-    body: 'Two minutes today means next week’s decision doesn’t blindside you. Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
+    title_em: 'So next week doesn’t blindside you.',
+    body: 'Not a program you complete. Not an app you check. A daily habit that keeps you calibrated to yourself.',
     cta: 'Begin Your Reflection',
     note: 'No account required to begin. Just two minutes a day.',
   },

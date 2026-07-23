@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion'
 import { useTranslation } from '@/lib/i18n'
 
 const QUOTE_META = [
-  { dx: -10, color: '#D99A73' },
-  { dx: 10, color: '#B98BFF' },
-  { dx: -10, color: '#B98BFF' },
-  { dx: 10, color: '#D99A73' },
+  { dx: -10, color: '#C98E6B' },
+  { dx: 10, color: '#8BA5D4' },
+  { dx: -10, color: '#8BA5D4' },
+  { dx: 10, color: '#C98E6B' },
 ]
 
 export default function Reflections() {
