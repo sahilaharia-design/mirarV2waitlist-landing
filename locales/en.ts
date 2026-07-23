@@ -149,6 +149,26 @@ export default {
     footer: 'Two minutes. Every day. That is the practice.',
   },
 
+  mirror_carousel: {
+    instruction: 'Choose what feels closest. There is no right answer.',
+    reflection_status: 'Something is asking for attention.',
+    reflection_boundary: 'Not advice. Not a diagnosis. Just a mirror for this moment.',
+    choose_again: 'Choose again',
+    begin_reflection: 'Begin your two-minute reflection',
+    topline_signals: 'This week',
+    topline_report: 'Mirror',
+    signals_label: 'Reflections in this window',
+    signals_footer: 'Six areas, tracked quietly every day. Nothing is scored.',
+    signal_rows: [
+      { name: 'Direction', status: 'Aligned' },
+      { name: 'Energy', status: 'Under Load' },
+      { name: 'Attention', status: 'Stabilizing' },
+    ],
+    report_status: 'This week’s pattern.',
+    report_copy: 'Energy has shown pressure repeatedly. Direction is holding steady — a quiet strength.',
+    report_boundary: 'A weekly mirror, not a report card. Nothing to complete.',
+  },
+
   alignment_loop: {
     eyebrow: 'The Practice',
     title_line1: 'The practice has four movements.',

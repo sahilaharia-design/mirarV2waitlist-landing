@@ -149,6 +149,26 @@ export default {
     footer: 'दो मिनट। हर दिन। यही अभ्यास है।',
   },
 
+  mirror_carousel: {
+    instruction: 'जो सबसे करीब लगे उसे चुनें। कोई सही जवाब नहीं है।',
+    reflection_status: 'कुछ है जो ध्यान मांग रहा है।',
+    reflection_boundary: 'सलाह नहीं। निदान नहीं। बस इस पल के लिए एक दर्पण।',
+    choose_again: 'फिर से चुनें',
+    begin_reflection: 'अपना दो-मिनट का प्रतिबिंब शुरू करें',
+    topline_signals: 'इस सप्ताह',
+    topline_report: 'दर्पण',
+    signals_label: 'इस विंडो में प्रतिबिंब',
+    signals_footer: 'हर दिन चुपचाप ट्रैक किए गए छह क्षेत्र। कुछ भी स्कोर नहीं होता।',
+    signal_rows: [
+      { name: 'दिशा', status: 'संरेखित' },
+      { name: 'ऊर्जा', status: 'दबाव में' },
+      { name: 'ध्यान', status: 'स्थिर हो रहा' },
+    ],
+    report_status: 'इस सप्ताह का पैटर्न।',
+    report_copy: 'ऊर्जा में बार-बार दबाव दिखा है। दिशा स्थिर बनी हुई है — एक शांत मजबूती।',
+    report_boundary: 'एक साप्ताहिक दर्पण, कोई रिपोर्ट कार्ड नहीं। पूरा करने को कुछ नहीं।',
+  },
+
   alignment_loop: {
     eyebrow: 'अभ्यास',
     title_line1: 'अभ्यास की चार गतियां हैं।',
