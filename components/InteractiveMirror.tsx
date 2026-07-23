@@ -165,12 +165,12 @@ export default function InteractiveMirror() {
                       fill="none"
                       stroke={zone.color}
                       strokeWidth="10"
-                      strokeLinecap="round"
+                      strokeLinecap="butt"
                       opacity="0.52"
                     />
                   ))}
                   <motion.g
-                    style={{ originX: '88px', originY: '100px' }}
+                    style={{ originX: '88px', originY: '100px', transformBox: 'view-box' }}
                     animate={{ rotate: rotation }}
                     transition={reduceMotion ? { duration: 0 } : { duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
                   >
