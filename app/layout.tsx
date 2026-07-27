@@ -22,13 +22,13 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mirar.life'),
-  title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
+  title: 'Mirar — For every part of life, a daily practice. Except one.',
   description:
-    'One honest answer a day. Mirar helps you notice the signals and patterns shaping your inner life—without scoring, diagnosing, or telling you who to become.',
+    'You’ve built habits for your body, your money, your time. The thing actually driving your choices has none. Two minutes a day catches the drift while it’s still small.',
   openGraph: {
-    title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
+    title: 'Mirar — For every part of life, a daily practice. Except one.',
     description:
-      'One honest answer a day. Notice what is quietly forming inside you.',
+      'Two minutes a day to catch the drift in how you’re really doing — before it becomes a pattern. No account required to try it.',
     siteName: 'Mirar',
     url: 'https://mirar.life',
     locale: 'en_US',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mirar — A Two-Minute Daily Mirror for Your Inner Life',
-    description: 'One honest answer a day. Notice what is quietly forming inside you.',
+    title: 'Mirar — For every part of life, a daily practice. Except one.',
+    description: 'Two minutes a day to catch the drift in how you’re really doing — before it becomes a pattern.',
   },
   robots: { index: true, follow: true },
 }

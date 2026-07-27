@@ -48,16 +48,17 @@ export default function OpenGraphImage() {
           />
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: 82, color: '#8C7339', fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-            A DAILY MIRROR FOR YOUR INNER LIFE
+            INNER ALIGNMENT INFRASTRUCTURE
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', marginTop: 20, fontSize: 66, lineHeight: 0.98, letterSpacing: '-0.045em' }}>
-            <span>One honest answer.</span>
-            <span style={{ color: '#B77F5F' }}>A pattern you can see.</span>
+          <div style={{ display: 'flex', flexDirection: 'column', marginTop: 20, fontSize: 60, lineHeight: 1.02, letterSpacing: '-0.045em' }}>
+            <span>For every part of life,</span>
+            <span>a daily practice.</span>
+            <span style={{ color: '#B77F5F' }}>Except one.</span>
           </div>
 
-          <div style={{ display: 'flex', marginTop: 34, color: '#6B696E', fontSize: 23 }}>
-            Two minutes a day. No score. No judgement.
+          <div style={{ display: 'flex', marginTop: 34, color: '#6B696E', fontSize: 22 }}>
+            Two minutes a day. No account required to begin.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: 'auto', color: '#6B696E', fontSize: 16 }}>
@@ -104,8 +105,8 @@ export default function OpenGraphImage() {
                 <span key={color} style={{ display: 'flex', width: 13, height: 13, borderRadius: 13, background: color, opacity: 0.72 }} />
               ))}
             </div>
-            <div style={{ display: 'flex', color: '#2A2A30', fontSize: 34 }}>Still forming</div>
-            <div style={{ display: 'flex', marginTop: 12, color: '#6B696E', fontSize: 16 }}>pause · notice · return</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', width: 200, color: '#2A2A30', fontSize: 24, lineHeight: 1.2, textAlign: 'center', fontStyle: 'italic' }}>Something is asking for attention.</div>
+            <div style={{ display: 'flex', marginTop: 16, color: '#6B696E', fontSize: 16 }}>pause · notice · return</div>
           </div>
         </div>
       </div>
