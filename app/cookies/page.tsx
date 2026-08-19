@@ -79,6 +79,15 @@ export default function CookiesPage() {
               </p>
             </Section>
 
+            <Section title="Related">
+              <p>
+                This page covers browser storage specifically. For how we handle your data more broadly, see
+                our <a href="/privacy" className="text-peach hover:underline">Privacy Policy</a>. For the terms
+                that govern using Mirar, see our{' '}
+                <a href="/terms" className="text-peach hover:underline">Terms of Service</a>.
+              </p>
+            </Section>
+
             <Section title="Contact">
               <p>
                 Questions about this policy — write to{' '}
