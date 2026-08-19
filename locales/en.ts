@@ -252,6 +252,7 @@ export default {
     follow_rebuild: 'Follow the rebuild',
     privacy: 'Privacy',
     terms: 'Terms',
+    cookies: 'Cookies',
   },
 
   language_switcher: {

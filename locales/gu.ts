@@ -252,6 +252,7 @@ export default {
     follow_rebuild: 'રીબિલ્ડને ફોલો કરો',
     privacy: 'ગોપનીયતા',
     terms: 'નિયમો',
+    cookies: 'કૂકીઝ',
   },
 
   language_switcher: {

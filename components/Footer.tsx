@@ -76,6 +76,12 @@ export default function Footer() {
             >
               {t('footer.terms')}
             </a>
+            <a
+              href="/cookies"
+              className="font-sans text-xs text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
+            >
+              {t('footer.cookies')}
+            </a>
           </div>
           <a
             href="mailto:info@mirar.life"

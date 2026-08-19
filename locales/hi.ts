@@ -252,6 +252,7 @@ export default {
     follow_rebuild: 'रीबिल्ड को फॉलो करें',
     privacy: 'गोपनीयता',
     terms: 'नियम',
+    cookies: 'कुकीज़',
   },
 
   language_switcher: {
