@@ -142,6 +142,15 @@ export default function TermsPage() {
               </p>
             </Section>
 
+            <Section title="Related">
+              <p>
+                For how we handle your data, see our{' '}
+                <a href="/privacy" className="text-peach hover:underline">Privacy Policy</a>. For what this
+                website stores in your browser, see our{' '}
+                <a href="/cookies" className="text-peach hover:underline">Cookie Policy</a>.
+              </p>
+            </Section>
+
             <Section title="Contact">
               <p>
                 Questions about these terms — write to{' '}

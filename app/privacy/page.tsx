@@ -161,6 +161,15 @@ export default function PrivacyPage() {
               </p>
             </Section>
 
+            <Section title="Related">
+              <p>
+                This page covers your data specifically. For the terms that govern using Mirar, see our{' '}
+                <a href="/terms" className="text-peach hover:underline">Terms of Service</a>. For what this
+                website stores in your browser, see our{' '}
+                <a href="/cookies" className="text-peach hover:underline">Cookie Policy</a>.
+              </p>
+            </Section>
+
             <Section title="Contact">
               <p>
                 Questions, concerns, or a deletion request — write to{' '}
