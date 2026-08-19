@@ -251,6 +251,7 @@ export default {
     subtagline: 'નોંધવા માટે બનાવેલું. ઓપ્ટિમાઇઝ કરવા માટે નહીં.',
     follow_rebuild: 'રીબિલ્ડને ફોલો કરો',
     privacy: 'ગોપનીયતા',
+    terms: 'નિયમો',
   },
 
   language_switcher: {

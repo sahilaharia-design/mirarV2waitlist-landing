@@ -251,6 +251,7 @@ export default {
     subtagline: 'नोटिस करने के लिए बनाया गया। ऑप्टिमाइज़ करने के लिए नहीं।',
     follow_rebuild: 'रीबिल्ड को फॉलो करें',
     privacy: 'गोपनीयता',
+    terms: 'नियम',
   },
 
   language_switcher: {

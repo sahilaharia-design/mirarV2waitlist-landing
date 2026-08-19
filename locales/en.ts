@@ -251,6 +251,7 @@ export default {
     subtagline: 'Built for noticing. Not optimizing.',
     follow_rebuild: 'Follow the rebuild',
     privacy: 'Privacy',
+    terms: 'Terms',
   },
 
   language_switcher: {

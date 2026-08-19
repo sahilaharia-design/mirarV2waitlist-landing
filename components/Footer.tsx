@@ -70,6 +70,12 @@ export default function Footer() {
             >
               {t('footer.privacy')}
             </a>
+            <a
+              href="/terms"
+              className="font-sans text-xs text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
+            >
+              {t('footer.terms')}
+            </a>
           </div>
           <a
             href="mailto:info@mirar.life"
