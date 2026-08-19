@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             {/* Full lockup: oval + Mirar + LOOK WITHIN. REALIGN. — 2508×1094 after trim */}
-            <a href="#" aria-label="Mirar home" className="inline-block mb-4 hover:opacity-70 transition-opacity">
+            <a href="/" aria-label="Mirar home" className="inline-block mb-4 hover:opacity-70 transition-opacity">
               <Image
                 src="/assets/brand/mirar-logo-full.png"
                 alt="Mirar — Look within. Realign."
@@ -60,9 +60,17 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-charcoal/8 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span className="font-sans text-xs text-text-secondary/70">
-            © {new Date().getFullYear()} Mirar
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="font-sans text-xs text-text-secondary/70">
+              © {new Date().getFullYear()} Mirar
+            </span>
+            <a
+              href="/privacy"
+              className="font-sans text-xs text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
+            >
+              {t('footer.privacy')}
+            </a>
+          </div>
           <a
             href="mailto:info@mirar.life"
             className="font-sans text-sm font-medium text-charcoal/80 hover:text-peach transition-colors duration-200"

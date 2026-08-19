@@ -250,6 +250,7 @@ export default {
     tagline: 'રોજિંદા જીવન માટે ભાવનાત્મક અને માનસિક સ્વચ્છતા.',
     subtagline: 'નોંધવા માટે બનાવેલું. ઓપ્ટિમાઇઝ કરવા માટે નહીં.',
     follow_rebuild: 'રીબિલ્ડને ફોલો કરો',
+    privacy: 'ગોપનીયતા',
   },
 
   language_switcher: {

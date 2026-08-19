@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { useTranslation } from '@/lib/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -16,9 +17,14 @@ const SOCIAL_LINKS = [
 
 export default function Header() {
   const { t } = useTranslation()
+  // On-page anchors (#practice, #dimensions) only resolve on the home page —
+  // from any other route (e.g. /privacy) they'd silently no-op. Prefix with
+  // "/" there so they navigate home and land on the right section instead.
+  const pathname = usePathname()
+  const anchorPrefix = pathname === '/' ? '' : '/'
   const NAV_LINKS = [
-    { label: t('header.nav_how'), href: '#practice', external: false },
-    { label: t('header.nav_dimensions'), href: '#dimensions', external: false },
+    { label: t('header.nav_how'), href: `${anchorPrefix}#practice`, external: false },
+    { label: t('header.nav_dimensions'), href: `${anchorPrefix}#dimensions`, external: false },
     { label: t('header.nav_notes'), href: 'https://substack.com/@mirarlife', external: true },
   ]
   const [scrolled,  setScrolled]  = useState(false)
@@ -84,7 +90,7 @@ export default function Header() {
           }`}
         >
           {/* Logo */}
-          <a href="#" aria-label="Mirar home" className="hover:opacity-70 transition-opacity flex-shrink-0">
+          <a href="/" aria-label="Mirar home" className="hover:opacity-70 transition-opacity flex-shrink-0">
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               <Image src="/assets/brand/mirar-mark.png" alt="" aria-hidden width={20} height={30}
                 style={{ height: '28px', width: 'auto', display: 'block' }} />

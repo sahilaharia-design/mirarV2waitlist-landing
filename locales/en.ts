@@ -250,6 +250,7 @@ export default {
     tagline: 'Emotional and mental hygiene for everyday life.',
     subtagline: 'Built for noticing. Not optimizing.',
     follow_rebuild: 'Follow the rebuild',
+    privacy: 'Privacy',
   },
 
   language_switcher: {
