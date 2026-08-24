@@ -74,8 +74,12 @@ export default function PrivacyPage() {
                 Gujarati) and light/dark mode setting.
               </p>
               <p>
-                We do not collect your location, contacts, photos, or device identifiers, and Mirar contains no
-                third-party advertising or analytics trackers.
+                We do not collect your location, contacts, photos, or device identifiers, and the app itself
+                (mirar-app.vercel.app) contains no third-party advertising or analytics trackers. This marketing
+                site (mirar.life) uses Google Analytics to measure aggregate traffic — see our{' '}
+                <a href="/cookies" className="text-peach hover:underline">Cookie Policy</a> for exactly what
+                that sets and why. Either way: no ad trackers, no data sold, no cross-site advertising profile
+                built on you.
               </p>
             </Section>
 

@@ -6,12 +6,12 @@ import PageMotion from '@/components/PageMotion'
 export const metadata: Metadata = {
   title: 'Cookie Policy — Mirar',
   description:
-    'What mirar.life stores in your browser — and what it doesn’t. No tracking or advertising cookies.',
+    'What mirar.life stores in your browser: Google Analytics (aggregate usage only) and your language preference.',
   alternates: { canonical: 'https://mirar.life/cookies' },
   robots: { index: true, follow: true },
 }
 
-const LAST_UPDATED = 'August 19, 2026'
+const LAST_UPDATED = 'August 24, 2026'
 
 export default function CookiesPage() {
   return (
@@ -35,24 +35,36 @@ export default function CookiesPage() {
           <div className="prose-cookies max-w-2xl font-sans text-charcoal/90 leading-relaxed space-y-12">
             <section>
               <p className="text-lg text-charcoal leading-relaxed">
-                The honest version: this site (mirar.life) doesn&rsquo;t set any tracking or advertising cookies.
-                There&rsquo;s no cookie banner asking you to &ldquo;accept&rdquo; anything here, because there&rsquo;s
-                nothing non-essential to accept.
+                mirar.life uses Google Analytics to understand which parts of the site are actually working —
+                nothing beyond that. No advertising cookies, no cross-site tracking, no data sold to anyone.
+                Here&rsquo;s exactly what&rsquo;s set and why.
               </p>
             </section>
 
             <Section title="What this site actually stores">
               <p>
-                mirar.life sets no cookies at all — first-party or third-party. The one thing it stores in your
-                browser is your language choice (English, Hindi, or Gujarati), kept in{' '}
-                <code className="font-mono text-[0.9em] bg-card-bg px-1.5 py-0.5 rounded">localStorage</code>,
-                a different, cookie-adjacent browser storage mechanism, purely so the site remembers your
-                preference on your next visit. It isn&rsquo;t sent to any server, isn&rsquo;t used to track you
-                across sites, and you can clear it any time through your browser&rsquo;s settings.
+                <strong className="text-charcoal">Google Analytics (GA4).</strong> Sets a couple of first-party
+                cookies (named <code className="font-mono text-[0.9em] bg-card-bg px-1.5 py-0.5 rounded">_ga</code>{' '}
+                and <code className="font-mono text-[0.9em] bg-card-bg px-1.5 py-0.5 rounded">_ga_*</code>) to
+                measure aggregate usage — which pages get visited, roughly how many people are showing up,
+                general device/location info. It does not identify you by name or email, and we don&rsquo;t use
+                it to build an advertising profile or sell data to anyone. It&rsquo;s run by Google, under{' '}
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-peach hover:underline">
+                  Google&rsquo;s own privacy policy
+                </a>
+                . You can block it anytime with a browser extension (uBlock Origin, Privacy Badger, or similar)
+                without breaking anything on the site.
               </p>
               <p>
-                There are no analytics scripts, no advertising pixels, and no embedded third-party widgets on
-                this site that could set cookies of their own.
+                <strong className="text-charcoal">Language preference.</strong> Your chosen language (English,
+                Hindi, or Gujarati), kept in{' '}
+                <code className="font-mono text-[0.9em] bg-card-bg px-1.5 py-0.5 rounded">localStorage</code> —
+                a different, cookie-adjacent browser storage mechanism — purely so the site remembers your
+                preference on your next visit. It isn&rsquo;t sent to any server and isn&rsquo;t used to track
+                you across sites.
+              </p>
+              <p>
+                There are no advertising pixels and no other embedded third-party widgets on this site.
               </p>
             </Section>
 
@@ -64,18 +76,18 @@ export default function CookiesPage() {
                 </a>
                 , is a separate site from mirar.life and uses browser storage only to keep you signed in and to
                 remember your settings (language, dark mode) — nothing used for advertising or cross-site
-                tracking. See our{' '}
+                tracking, and no Google Analytics. See our{' '}
                 <a href="/privacy" className="text-peach hover:underline">Privacy Policy</a> for what the app
                 stores and why.
               </p>
             </Section>
 
-            <Section title="If that ever changes">
+            <Section title="If that changes further">
               <p>
-                If we add anything non-essential in the future — analytics to understand what&rsquo;s working on
-                the site, for instance — we&rsquo;ll update this page first, and add an actual consent option
-                rather than assume it. This page will always reflect what is genuinely running, not a
-                boilerplate list of cookies that don&rsquo;t exist.
+                If we ever add anything beyond aggregate analytics — advertising, cross-site tracking, anything
+                that needs your explicit opt-in under local law — we&rsquo;ll update this page first and add a
+                real consent option rather than assume it. This page will always reflect what is genuinely
+                running, not a boilerplate list.
               </p>
             </Section>
 
