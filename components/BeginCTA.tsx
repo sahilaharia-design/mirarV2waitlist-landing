@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from '@/lib/i18n'
+import { trackCtaClick } from '@/lib/analytics'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 
@@ -28,7 +29,7 @@ export default function BeginCTA() {
           {t('begin_cta.title_line2')} <em>{t('begin_cta.title_em')}</em>
         </h2>
         <p>{t('begin_cta.body')}</p>
-        <a href={APP_URL} className="primary-cta primary-cta--light">
+        <a href={APP_URL} onClick={() => trackCtaClick('begin_cta')} className="primary-cta primary-cta--light">
           <span>{t('begin_cta.cta')}</span>
           <span className="primary-cta__arrow" aria-hidden>↗</span>
         </a>

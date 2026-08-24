@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from '@/lib/i18n'
+import { trackCtaClick } from '@/lib/analytics'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 const SLIDE_COUNT = 4
@@ -188,7 +189,7 @@ export default function InteractiveMirror() {
                 <button type="button" onClick={() => setSlide(0)} className="mirror-reflection__again">
                   {t('mirror_carousel.choose_again')}
                 </button>
-                <a href={APP_URL} className="mirror-reflection__begin">
+                <a href={APP_URL} onClick={() => trackCtaClick('interactive_mirror')} className="mirror-reflection__begin">
                   {t('mirror_carousel.begin_reflection')} <span aria-hidden>→</span>
                 </a>
               </div>
@@ -254,7 +255,7 @@ export default function InteractiveMirror() {
               <p className="mirror-reflection__boundary">{t('mirror_carousel.report_boundary')}</p>
 
               <div className="mirror-reflection__actions">
-                <a href={APP_URL} className="mirror-reflection__begin">
+                <a href={APP_URL} onClick={() => trackCtaClick('interactive_mirror')} className="mirror-reflection__begin">
                   {t('mirror_carousel.begin_reflection')} <span aria-hidden>→</span>
                 </a>
               </div>

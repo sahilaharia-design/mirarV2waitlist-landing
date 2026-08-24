@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from '@/lib/i18n'
 import InteractiveMirror from './InteractiveMirror'
+import { trackCtaClick } from '@/lib/analytics'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
@@ -42,7 +43,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div {...entrance(0.3)} className="hero-v2__actions">
-            <a href={APP_URL} className="primary-cta">
+            <a href={APP_URL} onClick={() => trackCtaClick('hero')} className="primary-cta">
               <span>{t('hero.cta')}</span>
               <span className="primary-cta__arrow" aria-hidden>↗</span>
             </a>

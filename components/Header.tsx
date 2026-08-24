@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from '@/lib/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
+import { trackCtaClick } from '@/lib/analytics'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 const LOGIN_URL = 'https://mirar-app.vercel.app/login'
@@ -116,6 +117,7 @@ export default function Header() {
           {/* Returning-user entry point — visually secondary, never competes with the CTA */}
           <a
             href={LOGIN_URL}
+            onClick={() => trackCtaClick('header_login')}
             className="hidden md:inline-block flex-shrink-0 font-sans text-[13px] text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
           >
             {t('header.log_in')}
@@ -128,7 +130,7 @@ export default function Header() {
           {/* CTA — always visible on every screen size */}
           <a
             href={APP_URL}
-            onClick={closeMenu}
+            onClick={() => { trackCtaClick('header_begin'); closeMenu(); }}
             className="flex-shrink-0 inline-flex items-center gap-1.5 px-4 sm:px-6 py-2.5 rounded-full font-sans font-semibold text-[12px] sm:text-[13px] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',
@@ -210,7 +212,7 @@ export default function Header() {
 
           <a
             href={LOGIN_URL}
-            onClick={closeMenu}
+            onClick={() => { trackCtaClick('header_login'); closeMenu(); }}
             className="block w-full text-center py-2.5 font-sans text-sm text-text-secondary/70 hover:text-charcoal transition-colors duration-200"
           >
             {t('header.already_have_account')}
@@ -218,7 +220,7 @@ export default function Header() {
 
           <a
             href={APP_URL}
-            onClick={closeMenu}
+            onClick={() => { trackCtaClick('header_begin'); closeMenu(); }}
             className="block w-full text-center py-4 px-7 rounded-full font-sans font-semibold text-base mt-2 mb-6 transition-all duration-200 hover:scale-[1.02] active:scale-95"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',

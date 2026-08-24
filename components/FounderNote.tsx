@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 import { useTranslation } from '@/lib/i18n'
+import { trackCtaClick } from '@/lib/analytics'
 
 const APP_URL = 'https://mirar-app.vercel.app/assess'
 
@@ -54,7 +55,7 @@ export default function FounderNote() {
               <strong>{t('founder_note.name')}</strong>
               <span>{t('founder_note.role')}</span>
             </div>
-            <a href={APP_URL}>{t('founder_note.cta')} <span aria-hidden>→</span></a>
+            <a href={APP_URL} onClick={() => trackCtaClick('founder_note')}>{t('founder_note.cta')} <span aria-hidden>→</span></a>
           </div>
         </motion.div>
       </div>
