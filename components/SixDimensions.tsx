@@ -47,7 +47,7 @@ export default function SixDimensions() {
               <div className="dimension-card__wash" aria-hidden />
               <div className="dimension-card__top">
                 <span className="dimension-card__glyph" aria-hidden>{dimension.glyph}</span>
-                <span className="dimension-card__code">{dimension.code}</span>
+                
               </div>
               <div className="dimension-card__copy">
                 <p>{dimension.name}</p>

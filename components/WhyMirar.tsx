@@ -105,7 +105,7 @@ export default function WhyMirar() {
             &ldquo;Mirar fills the space that nothing else covers.&rdquo;
           </p>
           <a
-            href="https://mirar-app.vercel.app/assess"
+            href="https://mirar-app.vercel.app/try"
             className="flex-shrink-0 animate-cta-pulse inline-flex items-center gap-2 px-6 py-3 rounded-full font-sans font-semibold text-sm transition-all duration-200 hover:scale-105 active:scale-95"
             style={{
               background: 'linear-gradient(135deg, #D99A73 0%, #C4806A 100%)',

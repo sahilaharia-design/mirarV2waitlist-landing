@@ -5,7 +5,7 @@ import { useTranslation } from '@/lib/i18n'
 import InteractiveMirror from './InteractiveMirror'
 import { trackCtaClick } from '@/lib/analytics'
 
-const APP_URL = 'https://mirar-app.vercel.app/assess'
+const APP_URL = 'https://mirar-app.vercel.app/try'
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 export default function Hero() {
@@ -52,7 +52,7 @@ export default function Hero() {
 
           <motion.div {...entrance(0.4)} className="hero-v2__trust" aria-label="Mirar principles">
             <span>No writing required</span>
-            <span>No score</span>
+            <span>No pressure</span>
             <span>Not therapy</span>
           </motion.div>
         </div>

@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from '@/lib/i18n'
 import { trackCtaClick } from '@/lib/analytics'
 
-const APP_URL = 'https://mirar-app.vercel.app/assess'
+const APP_URL = 'https://mirar-app.vercel.app/try'
 const SLIDE_COUNT = 4
 const AUTO_ADVANCE_MS = 4200
 

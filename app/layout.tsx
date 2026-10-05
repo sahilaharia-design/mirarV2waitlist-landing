@@ -28,13 +28,13 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mirar.life'),
-  title: 'Mirar — For every part of life, a daily practice. Except one.',
+  title: 'Mirar — You charge your phone every day. Check in on yourself too.',
   description:
-    'You’ve built habits for your body, your money, your time. The thing actually driving your choices has none. Two minutes a day catches the drift while it’s still small.',
+    'Five seconds a day turns your week into one number you can watch — and shows how fast you bounce back from a low day.',
   openGraph: {
-    title: 'Mirar — For every part of life, a daily practice. Except one.',
+    title: 'Mirar — You charge your phone every day. Check in on yourself too.',
     description:
-      'Two minutes a day to catch the drift in how you’re really doing — before it becomes a pattern. No account required to try it.',
+      'Five seconds a day to see how you’re really doing — before it becomes a pattern. No account required to try it.',
     siteName: 'Mirar',
     url: 'https://mirar.life',
     locale: 'en_US',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mirar — For every part of life, a daily practice. Except one.',
-    description: 'Two minutes a day to catch the drift in how you’re really doing — before it becomes a pattern.',
+    title: 'Mirar — You charge your phone every day. Check in on yourself too.',
+    description: 'Five seconds a day to see how you’re really doing — before it becomes a pattern.',
   },
   robots: { index: true, follow: true },
 }

@@ -48,17 +48,17 @@ export default function OpenGraphImage() {
           />
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: 82, color: '#8C7339', fontSize: 18, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-            INNER ALIGNMENT INFRASTRUCTURE
+            EVERYDAY EMOTIONAL HYGIENE
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', marginTop: 20, fontSize: 60, lineHeight: 1.02, letterSpacing: '-0.045em' }}>
-            <span>For every part of life,</span>
-            <span>a daily practice.</span>
-            <span style={{ color: '#B77F5F' }}>Except one.</span>
+            <span>You charge your phone every day.</span>
+            <span>Check in on yourself too.</span>
+            <span style={{ color: '#B77F5F' }}>Five seconds.</span>
           </div>
 
           <div style={{ display: 'flex', marginTop: 34, color: '#6B696E', fontSize: 22 }}>
-            Two minutes a day. No account required to begin.
+            Five seconds a day. No account required to begin.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', marginTop: 'auto', color: '#6B696E', fontSize: 16 }}>

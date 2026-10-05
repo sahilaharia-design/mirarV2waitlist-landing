@@ -7,7 +7,7 @@ import { useTranslation } from '@/lib/i18n'
 import LanguageSwitcher from './LanguageSwitcher'
 import { trackCtaClick } from '@/lib/analytics'
 
-const APP_URL = 'https://mirar-app.vercel.app/assess'
+const APP_URL = 'https://mirar-app.vercel.app/try'
 const LOGIN_URL = 'https://mirar-app.vercel.app/login'
 
 const SOCIAL_LINKS = [

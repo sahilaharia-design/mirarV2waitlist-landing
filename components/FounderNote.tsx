@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useTranslation } from '@/lib/i18n'
 import { trackCtaClick } from '@/lib/analytics'
 
-const APP_URL = 'https://mirar-app.vercel.app/assess'
+const APP_URL = 'https://mirar-app.vercel.app/try'
 
 export default function FounderNote() {
   const { t } = useTranslation()

@@ -50,7 +50,7 @@ const RITUAL_ICONS = [
   { icon: <IcnOval />,     dark: true  },
 ]
 
-const APP_URL = 'https://mirar-app.vercel.app/assess'
+const APP_URL = 'https://mirar-app.vercel.app/try'
 
 export default function WhyNow() {
   const { t, tList } = useTranslation()
