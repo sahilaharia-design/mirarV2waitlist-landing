@@ -28,13 +28,13 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mirar.life'),
-  title: 'Mirar — You charge your phone every day. Check in on yourself too.',
+  title: 'Mirar — Emotional fitness is practiced, not tracked.',
   description:
-    'Five seconds a day turns your week into one number you can watch — and shows how fast you bounce back from a low day.',
+    'One inner rep a day. A small daily practice that exercises awareness, clarity, resilience, relationships and aligned action.',
   openGraph: {
-    title: 'Mirar — You charge your phone every day. Check in on yourself too.',
+    title: 'Mirar — Emotional fitness is practiced, not tracked.',
     description:
-      'Five seconds a day to see how you’re really doing — before it becomes a pattern. No account required to try it.',
+      'One inner rep a day. A small daily practice that exercises awareness, clarity, resilience, relationships and aligned action.',
     siteName: 'Mirar',
     url: 'https://mirar.life',
     locale: 'en_US',
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mirar — You charge your phone every day. Check in on yourself too.',
-    description: 'Five seconds a day to see how you’re really doing — before it becomes a pattern.',
+    title: 'Mirar — Emotional fitness is practiced, not tracked.',
+    description: 'One inner rep a day. A small daily practice for awareness, clarity, resilience, relationships and aligned action.',
   },
   robots: { index: true, follow: true },
 }
